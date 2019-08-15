@@ -16,6 +16,7 @@
 		EF508CC523059D4A00A7000D /* TetCurrencyExchangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CC423059D4A00A7000D /* TetCurrencyExchangeUITests.swift */; };
 		EF508CD62305A0F100A7000D /* CurrencyListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CD52305A0F100A7000D /* CurrencyListViewPresenter.swift */; };
 		EF508CDA2305A64700A7000D /* CurrencyListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */; };
+		EF508CDC2305EC6E00A7000D /* CurrencyRatesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CDB2305EC6E00A7000D /* CurrencyRatesEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EF508CC623059D4A00A7000D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF508CD52305A0F100A7000D /* CurrencyListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewPresenter.swift; sourceTree = "<group>"; };
 		EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListInteractor.swift; sourceTree = "<group>"; };
+		EF508CDB2305EC6E00A7000D /* CurrencyRatesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRatesEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				EF508CA423059D4800A7000D /* AppDelegate.swift */,
 				EF508CD223059FB700A7000D /* Views-Presenters */,
 				EF508CD82305A60A00A7000D /* Interactors */,
+				EF508CDD2305EC7700A7000D /* Entities */,
 				EF508CD323059FDA00A7000D /* Managers */,
 				EF508CA823059D4800A7000D /* Main.storyboard */,
 				EF508CAB23059D4A00A7000D /* Assets.xcassets */,
@@ -169,6 +172,14 @@
 				EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */,
 			);
 			path = Interactors;
+			sourceTree = "<group>";
+		};
+		EF508CDD2305EC7700A7000D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CDB2305EC6E00A7000D /* CurrencyRatesEntity.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +317,7 @@
 				EF508CDA2305A64700A7000D /* CurrencyListInteractor.swift in Sources */,
 				EF508CA523059D4800A7000D /* AppDelegate.swift in Sources */,
 				EF508CD62305A0F100A7000D /* CurrencyListViewPresenter.swift in Sources */,
+				EF508CDC2305EC6E00A7000D /* CurrencyRatesEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
