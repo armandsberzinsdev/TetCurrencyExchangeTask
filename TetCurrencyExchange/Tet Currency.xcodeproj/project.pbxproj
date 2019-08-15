@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF508CA523059D4800A7000D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CA423059D4800A7000D /* AppDelegate.swift */; };
+		EF508CA723059D4800A7000D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CA623059D4800A7000D /* ViewController.swift */; };
+		EF508CAA23059D4800A7000D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508CA823059D4800A7000D /* Main.storyboard */; };
+		EF508CAC23059D4A00A7000D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF508CAB23059D4A00A7000D /* Assets.xcassets */; };
+		EF508CAF23059D4A00A7000D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508CAD23059D4A00A7000D /* LaunchScreen.storyboard */; };
+		EF508CBA23059D4A00A7000D /* TetCurrencyExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CB923059D4A00A7000D /* TetCurrencyExchangeTests.swift */; };
+		EF508CC523059D4A00A7000D /* TetCurrencyExchangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CC423059D4A00A7000D /* TetCurrencyExchangeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF508CB623059D4A00A7000D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF508C9923059D4800A7000D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF508CA023059D4800A7000D;
+			remoteInfo = TetCurrencyExchange;
+		};
+		EF508CC123059D4A00A7000D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF508C9923059D4800A7000D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF508CA023059D4800A7000D;
+			remoteInfo = TetCurrencyExchange;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF508CA123059D4800A7000D /* Tet Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tet Currency.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF508CA423059D4800A7000D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF508CA623059D4800A7000D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF508CA923059D4800A7000D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF508CAB23059D4A00A7000D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF508CAE23059D4A00A7000D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF508CB023059D4A00A7000D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF508CB523059D4A00A7000D /* Tet CurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tet CurrencyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF508CB923059D4A00A7000D /* TetCurrencyExchangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetCurrencyExchangeTests.swift; sourceTree = "<group>"; };
+		EF508CBB23059D4A00A7000D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF508CC023059D4A00A7000D /* Tet CurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tet CurrencyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF508CC423059D4A00A7000D /* TetCurrencyExchangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetCurrencyExchangeUITests.swift; sourceTree = "<group>"; };
+		EF508CC623059D4A00A7000D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF508C9E23059D4800A7000D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508CB223059D4A00A7000D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508CBD23059D4A00A7000D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF508C9823059D4800A7000D = {
+			isa = PBXGroup;
+			children = (
+				EF508CA323059D4800A7000D /* TetCurrencyExchange */,
+				EF508CB823059D4A00A7000D /* TetCurrencyExchangeTests */,
+				EF508CC323059D4A00A7000D /* TetCurrencyExchangeUITests */,
+				EF508CA223059D4800A7000D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF508CA223059D4800A7000D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CA123059D4800A7000D /* Tet Currency.app */,
+				EF508CB523059D4A00A7000D /* Tet CurrencyTests.xctest */,
+				EF508CC023059D4A00A7000D /* Tet CurrencyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF508CA323059D4800A7000D /* TetCurrencyExchange */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CA423059D4800A7000D /* AppDelegate.swift */,
+				EF508CA623059D4800A7000D /* ViewController.swift */,
+				EF508CA823059D4800A7000D /* Main.storyboard */,
+				EF508CAB23059D4A00A7000D /* Assets.xcassets */,
+				EF508CAD23059D4A00A7000D /* LaunchScreen.storyboard */,
+				EF508CB023059D4A00A7000D /* Info.plist */,
+			);
+			path = TetCurrencyExchange;
+			sourceTree = "<group>";
+		};
+		EF508CB823059D4A00A7000D /* TetCurrencyExchangeTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CB923059D4A00A7000D /* TetCurrencyExchangeTests.swift */,
+				EF508CBB23059D4A00A7000D /* Info.plist */,
+			);
+			path = TetCurrencyExchangeTests;
+			sourceTree = "<group>";
+		};
+		EF508CC323059D4A00A7000D /* TetCurrencyExchangeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CC423059D4A00A7000D /* TetCurrencyExchangeUITests.swift */,
+				EF508CC623059D4A00A7000D /* Info.plist */,
+			);
+			path = TetCurrencyExchangeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF508CA023059D4800A7000D /* Tet Currency */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF508CC923059D4A00A7000D /* Build configuration list for PBXNativeTarget "Tet Currency" */;
+			buildPhases = (
+				EF508C9D23059D4800A7000D /* Sources */,
+				EF508C9E23059D4800A7000D /* Frameworks */,
+				EF508C9F23059D4800A7000D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tet Currency";
+			productName = TetCurrencyExchange;
+			productReference = EF508CA123059D4800A7000D /* Tet Currency.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF508CB423059D4A00A7000D /* Tet CurrencyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF508CCC23059D4A00A7000D /* Build configuration list for PBXNativeTarget "Tet CurrencyTests" */;
+			buildPhases = (
+				EF508CB123059D4A00A7000D /* Sources */,
+				EF508CB223059D4A00A7000D /* Frameworks */,
+				EF508CB323059D4A00A7000D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF508CB723059D4A00A7000D /* PBXTargetDependency */,
+			);
+			name = "Tet CurrencyTests";
+			productName = TetCurrencyExchangeTests;
+			productReference = EF508CB523059D4A00A7000D /* Tet CurrencyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF508CBF23059D4A00A7000D /* Tet CurrencyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF508CCF23059D4A00A7000D /* Build configuration list for PBXNativeTarget "Tet CurrencyUITests" */;
+			buildPhases = (
+				EF508CBC23059D4A00A7000D /* Sources */,
+				EF508CBD23059D4A00A7000D /* Frameworks */,
+				EF508CBE23059D4A00A7000D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF508CC223059D4A00A7000D /* PBXTargetDependency */,
+			);
+			name = "Tet CurrencyUITests";
+			productName = TetCurrencyExchangeUITests;
+			productReference = EF508CC023059D4A00A7000D /* Tet CurrencyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF508C9923059D4800A7000D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = armandsberzinsdev;
+				TargetAttributes = {
+					EF508CA023059D4800A7000D = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					EF508CB423059D4A00A7000D = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = EF508CA023059D4800A7000D;
+					};
+					EF508CBF23059D4A00A7000D = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = EF508CA023059D4800A7000D;
+					};
+				};
+			};
+			buildConfigurationList = EF508C9C23059D4800A7000D /* Build configuration list for PBXProject "Tet Currency" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF508C9823059D4800A7000D;
+			productRefGroup = EF508CA223059D4800A7000D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF508CA023059D4800A7000D /* Tet Currency */,
+				EF508CB423059D4A00A7000D /* Tet CurrencyTests */,
+				EF508CBF23059D4A00A7000D /* Tet CurrencyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF508C9F23059D4800A7000D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF508CAF23059D4A00A7000D /* LaunchScreen.storyboard in Resources */,
+				EF508CAC23059D4A00A7000D /* Assets.xcassets in Resources */,
+				EF508CAA23059D4800A7000D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508CB323059D4A00A7000D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508CBE23059D4A00A7000D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF508C9D23059D4800A7000D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF508CA723059D4800A7000D /* ViewController.swift in Sources */,
+				EF508CA523059D4800A7000D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508CB123059D4A00A7000D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF508CBA23059D4A00A7000D /* TetCurrencyExchangeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508CBC23059D4A00A7000D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF508CC523059D4A00A7000D /* TetCurrencyExchangeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF508CB723059D4A00A7000D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF508CA023059D4800A7000D /* Tet Currency */;
+			targetProxy = EF508CB623059D4A00A7000D /* PBXContainerItemProxy */;
+		};
+		EF508CC223059D4A00A7000D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF508CA023059D4800A7000D /* Tet Currency */;
+			targetProxy = EF508CC123059D4A00A7000D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF508CA823059D4800A7000D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF508CA923059D4800A7000D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF508CAD23059D4A00A7000D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF508CAE23059D4A00A7000D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF508CC723059D4A00A7000D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF508CC823059D4A00A7000D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF508CCA23059D4A00A7000D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9557RVYS7;
+				INFOPLIST_FILE = TetCurrencyExchange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = armandsberzinsdev.TetCurrencyExchange;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF508CCB23059D4A00A7000D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9557RVYS7;
+				INFOPLIST_FILE = TetCurrencyExchange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = armandsberzinsdev.TetCurrencyExchange;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF508CCD23059D4A00A7000D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9557RVYS7;
+				INFOPLIST_FILE = TetCurrencyExchangeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = armandsberzinsdev.TetCurrencyExchangeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tet Currency.app/Tet Currency";
+			};
+			name = Debug;
+		};
+		EF508CCE23059D4A00A7000D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9557RVYS7;
+				INFOPLIST_FILE = TetCurrencyExchangeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = armandsberzinsdev.TetCurrencyExchangeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tet Currency.app/Tet Currency";
+			};
+			name = Release;
+		};
+		EF508CD023059D4A00A7000D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9557RVYS7;
+				INFOPLIST_FILE = TetCurrencyExchangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = armandsberzinsdev.TetCurrencyExchangeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TetCurrencyExchange;
+			};
+			name = Debug;
+		};
+		EF508CD123059D4A00A7000D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9557RVYS7;
+				INFOPLIST_FILE = TetCurrencyExchangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = armandsberzinsdev.TetCurrencyExchangeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TetCurrencyExchange;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF508C9C23059D4800A7000D /* Build configuration list for PBXProject "Tet Currency" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF508CC723059D4A00A7000D /* Debug */,
+				EF508CC823059D4A00A7000D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF508CC923059D4A00A7000D /* Build configuration list for PBXNativeTarget "Tet Currency" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF508CCA23059D4A00A7000D /* Debug */,
+				EF508CCB23059D4A00A7000D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF508CCC23059D4A00A7000D /* Build configuration list for PBXNativeTarget "Tet CurrencyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF508CCD23059D4A00A7000D /* Debug */,
+				EF508CCE23059D4A00A7000D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF508CCF23059D4A00A7000D /* Build configuration list for PBXNativeTarget "Tet CurrencyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF508CD023059D4A00A7000D /* Debug */,
+				EF508CD123059D4A00A7000D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF508C9923059D4800A7000D /* Project object */;
+}
