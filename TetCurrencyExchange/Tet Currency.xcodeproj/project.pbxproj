@@ -17,6 +17,7 @@
 		EF508CD62305A0F100A7000D /* CurrencyListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CD52305A0F100A7000D /* CurrencyListViewPresenter.swift */; };
 		EF508CDA2305A64700A7000D /* CurrencyListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */; };
 		EF508CDC2305EC6E00A7000D /* CurrencyRatesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CDB2305EC6E00A7000D /* CurrencyRatesEntity.swift */; };
+		EF508CE22305F0B700A7000D /* CurrencyRatesEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE12305F0B700A7000D /* CurrencyRatesEntityTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		EF508CD52305A0F100A7000D /* CurrencyListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewPresenter.swift; sourceTree = "<group>"; };
 		EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListInteractor.swift; sourceTree = "<group>"; };
 		EF508CDB2305EC6E00A7000D /* CurrencyRatesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRatesEntity.swift; sourceTree = "<group>"; };
+		EF508CE12305F0B700A7000D /* CurrencyRatesEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRatesEntityTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				EF508CB923059D4A00A7000D /* TetCurrencyExchangeTests.swift */,
+				EF508CE02305F03000A7000D /* EntityTests */,
 				EF508CBB23059D4A00A7000D /* Info.plist */,
 			);
 			path = TetCurrencyExchangeTests;
@@ -180,6 +183,14 @@
 				EF508CDB2305EC6E00A7000D /* CurrencyRatesEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		EF508CE02305F03000A7000D /* EntityTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CE12305F0B700A7000D /* CurrencyRatesEntityTest.swift */,
+			);
+			path = EntityTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF508CBA23059D4A00A7000D /* TetCurrencyExchangeTests.swift in Sources */,
+				EF508CE22305F0B700A7000D /* CurrencyRatesEntityTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
