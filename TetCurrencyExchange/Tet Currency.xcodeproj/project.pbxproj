@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		EF508CA523059D4800A7000D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CA423059D4800A7000D /* AppDelegate.swift */; };
-		EF508CA723059D4800A7000D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CA623059D4800A7000D /* ViewController.swift */; };
+		EF508CA723059D4800A7000D /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CA623059D4800A7000D /* CurrencyListViewController.swift */; };
 		EF508CAA23059D4800A7000D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508CA823059D4800A7000D /* Main.storyboard */; };
 		EF508CAC23059D4A00A7000D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF508CAB23059D4A00A7000D /* Assets.xcassets */; };
 		EF508CAF23059D4A00A7000D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508CAD23059D4A00A7000D /* LaunchScreen.storyboard */; };
 		EF508CBA23059D4A00A7000D /* TetCurrencyExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CB923059D4A00A7000D /* TetCurrencyExchangeTests.swift */; };
 		EF508CC523059D4A00A7000D /* TetCurrencyExchangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CC423059D4A00A7000D /* TetCurrencyExchangeUITests.swift */; };
+		EF508CD62305A0F100A7000D /* CurrencyListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CD52305A0F100A7000D /* CurrencyListViewPresenter.swift */; };
+		EF508CDA2305A64700A7000D /* CurrencyListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		EF508CA123059D4800A7000D /* Tet Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tet Currency.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF508CA423059D4800A7000D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF508CA623059D4800A7000D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF508CA623059D4800A7000D /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
 		EF508CA923059D4800A7000D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF508CAB23059D4A00A7000D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF508CAE23059D4A00A7000D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		EF508CC023059D4A00A7000D /* Tet CurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tet CurrencyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF508CC423059D4A00A7000D /* TetCurrencyExchangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetCurrencyExchangeUITests.swift; sourceTree = "<group>"; };
 		EF508CC623059D4A00A7000D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF508CD52305A0F100A7000D /* CurrencyListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewPresenter.swift; sourceTree = "<group>"; };
+		EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				EF508CA423059D4800A7000D /* AppDelegate.swift */,
-				EF508CA623059D4800A7000D /* ViewController.swift */,
+				EF508CD223059FB700A7000D /* Views-Presenters */,
+				EF508CD82305A60A00A7000D /* Interactors */,
+				EF508CD323059FDA00A7000D /* Managers */,
 				EF508CA823059D4800A7000D /* Main.storyboard */,
 				EF508CAB23059D4A00A7000D /* Assets.xcassets */,
 				EF508CAD23059D4A00A7000D /* LaunchScreen.storyboard */,
@@ -123,6 +129,46 @@
 				EF508CC623059D4A00A7000D /* Info.plist */,
 			);
 			path = TetCurrencyExchangeUITests;
+			sourceTree = "<group>";
+		};
+		EF508CD223059FB700A7000D /* Views-Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CD72305A5ED00A7000D /* UIComponents */,
+				EF508CD423059FEB00A7000D /* CurrencyListView */,
+			);
+			path = "Views-Presenters";
+			sourceTree = "<group>";
+		};
+		EF508CD323059FDA00A7000D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EF508CD423059FEB00A7000D /* CurrencyListView */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CA623059D4800A7000D /* CurrencyListViewController.swift */,
+				EF508CD52305A0F100A7000D /* CurrencyListViewPresenter.swift */,
+			);
+			path = CurrencyListView;
+			sourceTree = "<group>";
+		};
+		EF508CD72305A5ED00A7000D /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		EF508CD82305A60A00A7000D /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF508CA723059D4800A7000D /* ViewController.swift in Sources */,
+				EF508CA723059D4800A7000D /* CurrencyListViewController.swift in Sources */,
+				EF508CDA2305A64700A7000D /* CurrencyListInteractor.swift in Sources */,
 				EF508CA523059D4800A7000D /* AppDelegate.swift in Sources */,
+				EF508CD62305A0F100A7000D /* CurrencyListViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  TetCurrencyExchange
 //
@@ -8,8 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CurrencyListViewController: UIViewController {
 
+    let uiPresenter = CurrencyListPresenter()
+    weak var uiPresenterDelegate: CurrencyListPresenterDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,3 +20,6 @@ class ViewController: UIViewController {
 
 }
 
+extension CurrencyListViewController: CurrencyListPresenterDelegate {
+
+}
