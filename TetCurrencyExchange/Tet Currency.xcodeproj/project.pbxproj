@@ -20,6 +20,7 @@
 		EF508CE22305F0B700A7000D /* CurrencyRatesEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE12305F0B700A7000D /* CurrencyRatesEntityTest.swift */; };
 		EF508CE42305F40100A7000D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EF508CE62306011F00A7000D /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE52306011F00A7000D /* ErrorEntity.swift */; };
+		EF508CE823060DAD00A7000D /* ErrorEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE723060DAD00A7000D /* ErrorEntityTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		EF508CE12305F0B700A7000D /* CurrencyRatesEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRatesEntityTest.swift; sourceTree = "<group>"; };
 		EF508CE32305F40100A7000D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF508CE52306011F00A7000D /* ErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEntity.swift; sourceTree = "<group>"; };
+		EF508CE723060DAD00A7000D /* ErrorEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEntityTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				EF508CE12305F0B700A7000D /* CurrencyRatesEntityTest.swift */,
+				EF508CE723060DAD00A7000D /* ErrorEntityTest.swift */,
 			);
 			path = EntityTests;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF508CE823060DAD00A7000D /* ErrorEntityTest.swift in Sources */,
 				EF508CBA23059D4A00A7000D /* TetCurrencyExchangeTests.swift in Sources */,
 				EF508CE22305F0B700A7000D /* CurrencyRatesEntityTest.swift in Sources */,
 			);
