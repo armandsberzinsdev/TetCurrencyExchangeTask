@@ -39,7 +39,7 @@ class NetworkManager {
                 return
             }
             
-            if self.isSuccessCode(urlResponse) {
+         //   if self.isSuccessCode(urlResponse) {
                 guard let data = data else {
                     print("Unable to parse the response in given type \(T.self)")
                     return errorHandler(.invalidCurrencyData)
@@ -52,7 +52,7 @@ class NetworkManager {
                     }
                     return
                 }
-            }
+          //  }
             errorHandler(.invalidCurrencyData)
         }
         
