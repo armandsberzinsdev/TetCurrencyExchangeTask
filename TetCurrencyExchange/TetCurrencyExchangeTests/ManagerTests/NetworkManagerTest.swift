@@ -98,19 +98,21 @@ class NetworkManagerTest: XCTestCase {
             XCTFail()
         }
         realNetworkManager.get(urlString: NetworkManager.TetCurrencyEndpoints.getCurrecyRates.rawValue, successHandler: successHandler, errorHandler: errorHandler)
-        waitForExpectations(timeout: 2)
+        waitForExpectations(timeout: 3)
     }
-//
-//    func test_onRealNetworkWrongUrlReturnsUrlError_callsGet_onFail() {
-//        let realNetworkManager = NetworkManager()
-//        let successHandler: ([HeadlineEntity]) throws -> Void = { (headlines) in
-//            XCTFail()
-//        }
-//        let errorHandler: (ErrorEntity) -> Void = { (networkManagerError) in
-//            XCTAssertEqual(networkManagerError, ErrorEntity.serverError)
-//        }
-//        realNetworkManager.get(urlString: "wrong-url", successHandler: successHandler, errorHandler: errorHandler)
-//    }
+
+    func test_onRealNetworkWrongUrlReturnsUrlError_callsGet_onFail() {
+        let realNetworkManager = NetworkManager()
+        let successHandler: (CurrencyRatesEntity) throws -> Void = { (currencyRates) in
+            XCTFail()
+        }
+        let errorHandler: (ErrorEntity) -> Void = { (networkManagerError) in
+            XCTAssertEqual(networkManagerError, ErrorEntity.serverError)
+            self.callExpectation.fulfill()
+        }
+        realNetworkManager.get(urlString: "https://www.wrong-url.lv", successHandler: successHandler, errorHandler: errorHandler)
+        waitForExpectations(timeout: 3)
+    }
 //
 //    func test_onRealNetworkWhenDeviceIsOfflineOfflineError_callsGet_onFail() {
 //        fakeNetworkManager.simulateOffline = true
