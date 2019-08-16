@@ -59,7 +59,7 @@ class NetworkManagerTest: XCTestCase {
     
     func test_jsonDataAreConverted_callsGet_onSuccess() {
         let successHandler: (CurrencyRatesEntity) throws -> Void = { (currencyRates) in
-            XCTAssertEqual(currencyRates.rates!.count, self.fakeCorrectResponse.rates!.count)
+            XCTAssertEqual(currencyRates.rates.count, self.fakeCorrectResponse.rates.count)
             XCTAssertEqual(currencyRates.base, self.fakeCorrectResponse.base)
             XCTAssertEqual(currencyRates.date, self.fakeCorrectResponse.date)
             self.callExpectation.fulfill()
@@ -70,17 +70,19 @@ class NetworkManagerTest: XCTestCase {
         fakeNetworkManager.get(urlString: fakeCorrectUrlPath, successHandler: successHandler, errorHandler: errorHandler)
         waitForExpectations(timeout: 1)
     }
-//
-//    func test_incorrectJsonDataReturnsInvalidDataError_callsGet_onFail() {
-//        let successHandler: ([HeadlineEntity]) throws -> Void = { (headlines) in
-//            XCTFail()
-//        }
-//        let errorHandler: (ErrorEntity) -> Void = { (networkManagerError) in
-//            XCTAssertEqual(networkManagerError, ErrorEntity.invalidData)
-//        }
-//        fakeNetworkManager.get(urlString: fakeWrongUrlPath, successHandler: successHandler, errorHandler: errorHandler)
-//    }
-//
+
+    func test_incorrectJsonDataReturnsInvalidDataError_callsGet_onFail() {
+        let successHandler: (CurrencyRatesEntity) throws -> Void = { (currencyRates) in
+            XCTFail()
+        }
+        let errorHandler: (ErrorEntity) -> Void = { (networkManagerError) in
+            XCTAssertEqual(networkManagerError, ErrorEntity.invalidCurrencyData)
+            self.callExpectation.fulfill()
+        }
+        fakeNetworkManager.get(urlString: fakeWrongUrlPath, successHandler: successHandler, errorHandler: errorHandler)
+        waitForExpectations(timeout: 1)
+    }
+
     func test_realNetworkCallIsMade_callsGet_onSuccess() {
         let realNetworkManager = NetworkManager()
         let successHandler: (CurrencyRatesEntity) throws -> Void = { (currencyRates) in
