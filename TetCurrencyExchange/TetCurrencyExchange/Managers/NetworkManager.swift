@@ -60,38 +60,7 @@ class NetworkManager {
             if let validUrl = prepareUrlWith(stringToConvert: urlString) {
                 var request = URLRequest(url: validUrl)
                 request.allHTTPHeaderFields = headers
-                activeRequests.updateValue(Date(), forKey: urlString)
-                URLSession.shared.dataTask(with: request, completionHandler: completionHandler).resume()
-            } else {
-                errorHandler(.wrongUrl)
-            }
-//        } else {
-//            errorHandler(.noNetwork)
-//        }
-    }
-    
-    /* Tracking not added for sendUrlOnly since I'm not sure some would be interesed to track request that basically does not need response */
-    func sendUrlOnly(urlString: String,
-                     headers: [String: String] = [:],
-                     successHandler: @escaping () -> Void,
-                     errorHandler: @escaping ErrorHandler) {
-        let completionHandler: NetworkCompletionHandler = { (data, urlResponse, error) in
-            if let error = error {
-                print(error.localizedDescription)
-                errorHandler(.serverError)
-                return
-            }
-            if self.isSuccessCode(urlResponse) {
-                successHandler()
-            } else {
-                errorHandler(.invalidCurrencyData)
-            }
-        }
-        
-    //    if isNetworkAvaliable(reachabilityManager: ReachabilityManager()) {
-            if let validUrl = prepareUrlWith(stringToConvert: urlString) {
-                var request = URLRequest(url: validUrl)
-                request.allHTTPHeaderFields = headers
+              //  activeRequests.updateValue(Date(), forKey: urlString)
                 URLSession.shared.dataTask(with: request, completionHandler: completionHandler).resume()
             } else {
                 errorHandler(.wrongUrl)

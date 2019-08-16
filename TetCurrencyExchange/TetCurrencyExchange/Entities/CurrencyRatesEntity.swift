@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CurrencyRatesEntity: Decodable {
+struct CurrencyRatesEntity: Codable {
     let rates: [String: Double]?
     let base, date: String?
 }

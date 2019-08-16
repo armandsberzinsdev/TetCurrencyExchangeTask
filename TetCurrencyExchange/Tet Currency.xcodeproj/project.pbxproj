@@ -21,6 +21,9 @@
 		EF508CE42305F40100A7000D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EF508CE62306011F00A7000D /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE52306011F00A7000D /* ErrorEntity.swift */; };
 		EF508CE823060DAD00A7000D /* ErrorEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE723060DAD00A7000D /* ErrorEntityTest.swift */; };
+		EF508CEA23060FBB00A7000D /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE923060FBB00A7000D /* NetworkManagerTest.swift */; };
+		EF508CEE2306115700A7000D /* FakeJson.json in Resources */ = {isa = PBXBuildFile; fileRef = EF508CEC2306115700A7000D /* FakeJson.json */; };
+		EF508CEF2306115700A7000D /* FakeInvalidJson.json in Resources */ = {isa = PBXBuildFile; fileRef = EF508CED2306115700A7000D /* FakeInvalidJson.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		EF508CE32305F40100A7000D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF508CE52306011F00A7000D /* ErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEntity.swift; sourceTree = "<group>"; };
 		EF508CE723060DAD00A7000D /* ErrorEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEntityTest.swift; sourceTree = "<group>"; };
+		EF508CE923060FBB00A7000D /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
+		EF508CEC2306115700A7000D /* FakeJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeJson.json; sourceTree = "<group>"; };
+		EF508CED2306115700A7000D /* FakeInvalidJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeInvalidJson.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				EF508CB923059D4A00A7000D /* TetCurrencyExchangeTests.swift */,
+				EF508CEB23060FC700A7000D /* ManagerTests */,
 				EF508CE02305F03000A7000D /* EntityTests */,
 				EF508CBB23059D4A00A7000D /* Info.plist */,
 			);
@@ -200,6 +207,16 @@
 				EF508CE723060DAD00A7000D /* ErrorEntityTest.swift */,
 			);
 			path = EntityTests;
+			sourceTree = "<group>";
+		};
+		EF508CEB23060FC700A7000D /* ManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CE923060FBB00A7000D /* NetworkManagerTest.swift */,
+				EF508CED2306115700A7000D /* FakeInvalidJson.json */,
+				EF508CEC2306115700A7000D /* FakeJson.json */,
+			);
+			path = ManagerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +333,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF508CEF2306115700A7000D /* FakeInvalidJson.json in Resources */,
+				EF508CEE2306115700A7000D /* FakeJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF508CEA23060FBB00A7000D /* NetworkManagerTest.swift in Sources */,
 				EF508CE823060DAD00A7000D /* ErrorEntityTest.swift in Sources */,
 				EF508CBA23059D4A00A7000D /* TetCurrencyExchangeTests.swift in Sources */,
 				EF508CE22305F0B700A7000D /* CurrencyRatesEntityTest.swift in Sources */,
