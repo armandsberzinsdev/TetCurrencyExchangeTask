@@ -39,7 +39,7 @@ class NetworkManager {
                 return
             }
             
-         //   if self.isSuccessCode(urlResponse) {
+           if self.isSuccessCode(urlResponse) {
                 guard let data = data else {
                     print("Unable to parse the response in given type \(T.self)")
                     return errorHandler(.invalidCurrencyData)
@@ -52,7 +52,7 @@ class NetworkManager {
                     }
                     return
                 }
-          //  }
+            }
             errorHandler(.invalidCurrencyData)
         }
         
@@ -70,10 +70,10 @@ class NetworkManager {
         }
     }
     
-    private func isSuccessCode(_ statusCode: Int) -> Bool {
+    func isSuccessCode(_ statusCode: Int) -> Bool {
         return statusCode >= 200 && statusCode < 300
     }
-    private func isSuccessCode(_ response: URLResponse?) -> Bool {
+    func isSuccessCode(_ response: URLResponse?) -> Bool {
         guard let urlResponse = response as? HTTPURLResponse else {
             return false
         }

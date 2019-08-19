@@ -27,6 +27,12 @@ class NetworkManagerTest: XCTestCase {
         override func isNetworkAvaliable(reachabilityManager: ReachabilityManager) -> Bool {
             return !simulateOffline
         }
+        override func isSuccessCode(_ statusCode: Int) -> Bool {
+            return true
+        }
+        override func isSuccessCode(_ response: URLResponse?) -> Bool {
+            return true
+        }
     }
     
     override func setUp() {
