@@ -24,9 +24,9 @@ class NetworkManager {
         return URL(string: stringToConvert)
     }
     
-//    func isNetworkAvaliable(reachabilityManager: ReachabilityManager) -> Bool {
-//        return reachabilityManager.isConnectedToNetwork()
-//    }
+    func isNetworkAvaliable(reachabilityManager: ReachabilityManager) -> Bool {
+        return reachabilityManager.isConnectedToNetwork()
+    }
     
     func get<T: Decodable>(urlString: String,
                            headers: [String: String] = [:],
@@ -56,7 +56,7 @@ class NetworkManager {
             errorHandler(.invalidCurrencyData)
         }
         
- //       if isNetworkAvaliable(reachabilityManager: ReachabilityManager()) {
+        if isNetworkAvaliable(reachabilityManager: ReachabilityManager()) {
             if let validUrl = prepareUrlWith(stringToConvert: urlString) {
                 var request = URLRequest(url: validUrl)
                 request.allHTTPHeaderFields = headers
@@ -65,9 +65,9 @@ class NetworkManager {
             } else {
                 errorHandler(.wrongUrl)
             }
-//        } else {
-//            errorHandler(.noNetwork)
-//        }
+        } else {
+            errorHandler(.noNetwork)
+        }
     }
     
     private func isSuccessCode(_ statusCode: Int) -> Bool {

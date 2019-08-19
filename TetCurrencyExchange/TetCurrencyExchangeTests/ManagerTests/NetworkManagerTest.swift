@@ -24,9 +24,9 @@ class NetworkManagerTest: XCTestCase {
             return URL(fileURLWithPath: stringToConvert)
         }
         var simulateOffline = false
-//        override func isNetworkAvaliable(reachabilityManager: ReachabilityManager) -> Bool {
-//            return !simulateOffline
-//        }
+        override func isNetworkAvaliable(reachabilityManager: ReachabilityManager) -> Bool {
+            return !simulateOffline
+        }
     }
     
     override func setUp() {
@@ -108,15 +108,17 @@ class NetworkManagerTest: XCTestCase {
         realNetworkManager.get(urlString: "https://www.wrong-url.lv", successHandler: successHandler, errorHandler: errorHandler)
         waitForExpectations(timeout: 3)
     }
-//
-//    func test_onRealNetworkWhenDeviceIsOfflineOfflineError_callsGet_onFail() {
-//        fakeNetworkManager.simulateOffline = true
-//        let successHandler: ([HeadlineEntity]) throws -> Void = { (headlines) in
-//            XCTFail()
-//        }
-//        let errorHandler: (ErrorEntity) -> Void = { (networkManagerError) in
-//            XCTAssertEqual(networkManagerError, ErrorEntity.noNetwork)
-//        }
-//        fakeNetworkManager.get(urlString: fakeCorrectUrlPath, successHandler: successHandler, errorHandler: errorHandler)
-//    }
+
+    func test_onRealNetworkWhenDeviceIsOfflineOfflineError_callsGet_onFail() {
+        fakeNetworkManager.simulateOffline = true
+        let successHandler: (CurrencyRatesEntity) throws -> Void = { (currencyRates) in
+            XCTFail()
+        }
+        let errorHandler: (ErrorEntity) -> Void = { (networkManagerError) in
+            XCTAssertEqual(networkManagerError, ErrorEntity.noNetwork)
+            self.callExpectation.fulfill()
+        }
+        fakeNetworkManager.get(urlString: fakeCorrectUrlPath, successHandler: successHandler, errorHandler: errorHandler)
+        waitForExpectations(timeout: 1)
+    }
 }
