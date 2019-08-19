@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct CurrencyRatesEntity: Decodable {
-    let rates: [String: Double]?
-    let base, date: String?
+struct CurrencyRatesEntity: Codable {
+    let rates: [String: Double]
+    let base, date: String
 }
 

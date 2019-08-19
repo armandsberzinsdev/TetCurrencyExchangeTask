@@ -18,6 +18,29 @@
 		EF508CDA2305A64700A7000D /* CurrencyListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */; };
 		EF508CDC2305EC6E00A7000D /* CurrencyRatesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CDB2305EC6E00A7000D /* CurrencyRatesEntity.swift */; };
 		EF508CE22305F0B700A7000D /* CurrencyRatesEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE12305F0B700A7000D /* CurrencyRatesEntityTest.swift */; };
+		EF508CE42305F40100A7000D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
+		EF508CE62306011F00A7000D /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE52306011F00A7000D /* ErrorEntity.swift */; };
+		EF508CE823060DAD00A7000D /* ErrorEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE723060DAD00A7000D /* ErrorEntityTest.swift */; };
+		EF508CEA23060FBB00A7000D /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE923060FBB00A7000D /* NetworkManagerTest.swift */; };
+		EF508CEE2306115700A7000D /* FakeJson.json in Resources */ = {isa = PBXBuildFile; fileRef = EF508CEC2306115700A7000D /* FakeJson.json */; };
+		EF508CEF2306115700A7000D /* FakeInvalidJson.json in Resources */ = {isa = PBXBuildFile; fileRef = EF508CED2306115700A7000D /* FakeInvalidJson.json */; };
+		EFC94C082306DAA0006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
+		EFC94C092306DAA1006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
+		EFC94C0A2306DAA7006D5191 /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE52306011F00A7000D /* ErrorEntity.swift */; };
+		EFC94C0B2306DAA7006D5191 /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE52306011F00A7000D /* ErrorEntity.swift */; };
+		EFC94C0C2306DAAA006D5191 /* CurrencyRatesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CDB2305EC6E00A7000D /* CurrencyRatesEntity.swift */; };
+		EFC94C0D2306DAAB006D5191 /* CurrencyRatesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CDB2305EC6E00A7000D /* CurrencyRatesEntity.swift */; };
+		EFC94C0E2306DAAE006D5191 /* CurrencyListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */; };
+		EFC94C0F2306DAAF006D5191 /* CurrencyListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */; };
+		EFC94C102306DAB2006D5191 /* CurrencyListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CD52305A0F100A7000D /* CurrencyListViewPresenter.swift */; };
+		EFC94C112306DAB3006D5191 /* CurrencyListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CD52305A0F100A7000D /* CurrencyListViewPresenter.swift */; };
+		EFC94C122306DAB6006D5191 /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CA623059D4800A7000D /* CurrencyListViewController.swift */; };
+		EFC94C132306DAB6006D5191 /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CA623059D4800A7000D /* CurrencyListViewController.swift */; };
+		EFC94C142306DABB006D5191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CA423059D4800A7000D /* AppDelegate.swift */; };
+		EFC94C152306DABC006D5191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CA423059D4800A7000D /* AppDelegate.swift */; };
+		EFC94C17230A93D6006D5191 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC94C16230A93D6006D5191 /* ReachabilityManager.swift */; };
+		EFC94C18230A93D6006D5191 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC94C16230A93D6006D5191 /* ReachabilityManager.swift */; };
+		EFC94C19230A93D6006D5191 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC94C16230A93D6006D5191 /* ReachabilityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +78,13 @@
 		EF508CD92305A64700A7000D /* CurrencyListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListInteractor.swift; sourceTree = "<group>"; };
 		EF508CDB2305EC6E00A7000D /* CurrencyRatesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRatesEntity.swift; sourceTree = "<group>"; };
 		EF508CE12305F0B700A7000D /* CurrencyRatesEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRatesEntityTest.swift; sourceTree = "<group>"; };
+		EF508CE32305F40100A7000D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EF508CE52306011F00A7000D /* ErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEntity.swift; sourceTree = "<group>"; };
+		EF508CE723060DAD00A7000D /* ErrorEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEntityTest.swift; sourceTree = "<group>"; };
+		EF508CE923060FBB00A7000D /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
+		EF508CEC2306115700A7000D /* FakeJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeJson.json; sourceTree = "<group>"; };
+		EF508CED2306115700A7000D /* FakeInvalidJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeInvalidJson.json; sourceTree = "<group>"; };
+		EFC94C16230A93D6006D5191 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				EF508CB923059D4A00A7000D /* TetCurrencyExchangeTests.swift */,
+				EF508CEB23060FC700A7000D /* ManagerTests */,
 				EF508CE02305F03000A7000D /* EntityTests */,
 				EF508CBB23059D4A00A7000D /* Info.plist */,
 			);
@@ -149,6 +180,8 @@
 		EF508CD323059FDA00A7000D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				EF508CE32305F40100A7000D /* NetworkManager.swift */,
+				EFC94C16230A93D6006D5191 /* ReachabilityManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -181,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				EF508CDB2305EC6E00A7000D /* CurrencyRatesEntity.swift */,
+				EF508CE52306011F00A7000D /* ErrorEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -189,8 +223,19 @@
 			isa = PBXGroup;
 			children = (
 				EF508CE12305F0B700A7000D /* CurrencyRatesEntityTest.swift */,
+				EF508CE723060DAD00A7000D /* ErrorEntityTest.swift */,
 			);
 			path = EntityTests;
+			sourceTree = "<group>";
+		};
+		EF508CEB23060FC700A7000D /* ManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CE923060FBB00A7000D /* NetworkManagerTest.swift */,
+				EF508CED2306115700A7000D /* FakeInvalidJson.json */,
+				EF508CEC2306115700A7000D /* FakeJson.json */,
+			);
+			path = ManagerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +313,6 @@
 					};
 					EF508CBF23059D4A00A7000D = {
 						CreatedOnToolsVersion = 10.3;
-						TestTargetID = EF508CA023059D4800A7000D;
 					};
 				};
 			};
@@ -307,6 +351,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF508CEF2306115700A7000D /* FakeInvalidJson.json in Resources */,
+				EF508CEE2306115700A7000D /* FakeJson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC94C17230A93D6006D5191 /* ReachabilityManager.swift in Sources */,
+				EF508CE62306011F00A7000D /* ErrorEntity.swift in Sources */,
+				EF508CE42305F40100A7000D /* NetworkManager.swift in Sources */,
 				EF508CA723059D4800A7000D /* CurrencyListViewController.swift in Sources */,
 				EF508CDA2305A64700A7000D /* CurrencyListInteractor.swift in Sources */,
 				EF508CA523059D4800A7000D /* AppDelegate.swift in Sources */,
@@ -336,8 +385,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC94C142306DABB006D5191 /* AppDelegate.swift in Sources */,
+				EFC94C122306DAB6006D5191 /* CurrencyListViewController.swift in Sources */,
+				EFC94C102306DAB2006D5191 /* CurrencyListViewPresenter.swift in Sources */,
+				EF508CEA23060FBB00A7000D /* NetworkManagerTest.swift in Sources */,
+				EFC94C18230A93D6006D5191 /* ReachabilityManager.swift in Sources */,
+				EFC94C0E2306DAAE006D5191 /* CurrencyListInteractor.swift in Sources */,
+				EF508CE823060DAD00A7000D /* ErrorEntityTest.swift in Sources */,
+				EFC94C082306DAA0006D5191 /* NetworkManager.swift in Sources */,
 				EF508CBA23059D4A00A7000D /* TetCurrencyExchangeTests.swift in Sources */,
 				EF508CE22305F0B700A7000D /* CurrencyRatesEntityTest.swift in Sources */,
+				EFC94C0C2306DAAA006D5191 /* CurrencyRatesEntity.swift in Sources */,
+				EFC94C0A2306DAA7006D5191 /* ErrorEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +404,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC94C152306DABC006D5191 /* AppDelegate.swift in Sources */,
+				EFC94C112306DAB3006D5191 /* CurrencyListViewPresenter.swift in Sources */,
+				EFC94C132306DAB6006D5191 /* CurrencyListViewController.swift in Sources */,
+				EFC94C092306DAA1006D5191 /* NetworkManager.swift in Sources */,
+				EFC94C19230A93D6006D5191 /* ReachabilityManager.swift in Sources */,
+				EFC94C0F2306DAAF006D5191 /* CurrencyListInteractor.swift in Sources */,
 				EF508CC523059D4A00A7000D /* TetCurrencyExchangeUITests.swift in Sources */,
+				EFC94C0B2306DAA7006D5191 /* ErrorEntity.swift in Sources */,
+				EFC94C0D2306DAAB006D5191 /* CurrencyRatesEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,9 +659,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = armandsberzinsdev.TetCurrencyExchangeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TetCurrencyExchange;
 			};
 			name = Debug;
 		};
@@ -612,9 +679,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = armandsberzinsdev.TetCurrencyExchangeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TetCurrencyExchange;
 			};
 			name = Release;
 		};
