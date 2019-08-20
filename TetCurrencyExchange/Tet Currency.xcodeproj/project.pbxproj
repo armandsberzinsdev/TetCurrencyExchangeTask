@@ -32,6 +32,12 @@
 		EF5F8FB4230C956E00AA913E /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */; };
 		EF5F8FB5230C956E00AA913E /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */; };
 		EF5F8FB6230C956E00AA913E /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */; };
+		EF5F8FBA230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB8230C9B8300AA913E /* CurrencyListTableViewCell.swift */; };
+		EF5F8FBB230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB8230C9B8300AA913E /* CurrencyListTableViewCell.swift */; };
+		EF5F8FBC230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB8230C9B8300AA913E /* CurrencyListTableViewCell.swift */; };
+		EF5F8FBD230C9B8300AA913E /* CurrencyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */; };
+		EF5F8FC0230CA09F00AA913E /* CurrencyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */; };
+		EF5F8FC1230CA09F00AA913E /* CurrencyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */; };
 		EFC94C082306DAA0006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EFC94C092306DAA1006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EFC94C0A2306DAA7006D5191 /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE52306011F00A7000D /* ErrorEntity.swift */; };
@@ -96,6 +102,8 @@
 		EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDataManager.swift; sourceTree = "<group>"; };
 		EF5F8FAF230C7EBE00AA913E /* CurrencyListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListPresenterTests.swift; sourceTree = "<group>"; };
 		EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
+		EF5F8FB8230C9B8300AA913E /* CurrencyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListTableViewCell.swift; sourceTree = "<group>"; };
+		EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyListTableViewCell.xib; sourceTree = "<group>"; };
 		EFC94C16230A93D6006D5191 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,6 +222,7 @@
 		EF508CD72305A5ED00A7000D /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EF5F8FB7230C9B4100AA913E /* CurrencyListComponents */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -276,6 +285,15 @@
 				EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF5F8FB7230C9B4100AA913E /* CurrencyListComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F8FB8230C9B8300AA913E /* CurrencyListTableViewCell.swift */,
+				EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */,
+			);
+			path = CurrencyListComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5F8FBD230C9B8300AA913E /* CurrencyListTableViewCell.xib in Resources */,
 				EF508CAF23059D4A00A7000D /* LaunchScreen.storyboard in Resources */,
 				EF508CAC23059D4A00A7000D /* Assets.xcassets in Resources */,
 				EF508CAA23059D4800A7000D /* Main.storyboard in Resources */,
@@ -391,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5F8FC0230CA09F00AA913E /* CurrencyListTableViewCell.xib in Resources */,
 				EF508CEF2306115700A7000D /* FakeInvalidJson.json in Resources */,
 				EF508CEE2306115700A7000D /* FakeJson.json in Resources */,
 			);
@@ -400,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5F8FC1230CA09F00AA913E /* CurrencyListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +438,7 @@
 				EF508CA723059D4800A7000D /* CurrencyListViewController.swift in Sources */,
 				EF508CDA2305A64700A7000D /* CurrencyListInteractor.swift in Sources */,
 				EF5F8FB4230C956E00AA913E /* ErrorExtension.swift in Sources */,
+				EF5F8FBA230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */,
 				EF508CA523059D4800A7000D /* AppDelegate.swift in Sources */,
 				EF508CD62305A0F100A7000D /* CurrencyListViewPresenter.swift in Sources */,
 				EF508CDC2305EC6E00A7000D /* CurrencyRatesEntity.swift in Sources */,
@@ -429,6 +451,7 @@
 			files = (
 				EFC94C142306DABB006D5191 /* AppDelegate.swift in Sources */,
 				EFC94C122306DAB6006D5191 /* CurrencyListViewController.swift in Sources */,
+				EF5F8FBB230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */,
 				EFC94C102306DAB2006D5191 /* CurrencyListViewPresenter.swift in Sources */,
 				EF508CEA23060FBB00A7000D /* NetworkManagerTest.swift in Sources */,
 				EFC94C18230A93D6006D5191 /* ReachabilityManager.swift in Sources */,
@@ -454,6 +477,7 @@
 				EFC94C112306DAB3006D5191 /* CurrencyListViewPresenter.swift in Sources */,
 				EFC94C132306DAB6006D5191 /* CurrencyListViewController.swift in Sources */,
 				EFC94C092306DAA1006D5191 /* NetworkManager.swift in Sources */,
+				EF5F8FBC230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */,
 				EFC94C19230A93D6006D5191 /* ReachabilityManager.swift in Sources */,
 				EFC94C0F2306DAAF006D5191 /* CurrencyListInteractor.swift in Sources */,
 				EF508CC523059D4A00A7000D /* TetCurrencyExchangeUITests.swift in Sources */,

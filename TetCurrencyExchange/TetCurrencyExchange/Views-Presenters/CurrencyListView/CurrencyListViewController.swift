@@ -13,7 +13,12 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
 
     let uiPresenter = CurrencyListPresenter()
     weak var uiPresenterDelegate: CurrencyListPresenterDelegate?
-    var currentCurrencyRates: CurrencyRatesEntity
+    var currentCurrencyRates: CurrencyRatesEntity?
+//
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(true)
+//        uiPresenter.viewControllerDidAppear()
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +29,7 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
         uiPresenter.uiPresenterDelegate = self
         currencyListTableView.delegate = self
         currencyListTableView.dataSource = self
-        currencyListTableView.register(UINib.init(nibName: "CurrecyRateCell", bundle: nil), forCellReuseIdentifier: "CurrecyRateCell")
+        currencyListTableView.register(UINib.init(nibName: "CurrencyListTableViewCell", bundle: nil), forCellReuseIdentifier: "CurrecyRateCell")
     }
 
 
@@ -32,17 +37,17 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
 
 extension CurrencyListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentCurrencyRates.rates.count
+        return currentCurrencyRates?.rates.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrecyRateCell") as! CurrecyRateTableViewCell
-        let ratesArray = Array(currentCurrencyRates.rates)
-        ratesArray[indexPath.row]
-    //    {
-//            cell.headlineLabel.text = headline.headline
-//            cell.lastUpdatedLabel.text = prepareDate(for: headline)
-    //    }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrecyRateCell") as! CurrencyListTableViewCell
+        if let safeCR = currentCurrencyRates {
+        let ratesArray = Array(safeCR.rates)
+         ratesArray[indexPath.row]
+            cell.rateKeyLbl.text = ratesArray[indexPath.row].key
+            cell.rateValueLbl.text = "\(ratesArray[indexPath.row].value)"
+        }
         return cell
     }
     
