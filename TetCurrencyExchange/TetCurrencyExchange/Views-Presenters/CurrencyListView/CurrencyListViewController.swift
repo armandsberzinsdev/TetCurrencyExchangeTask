@@ -62,6 +62,15 @@ extension CurrencyListViewController: UITableViewDelegate {
 //        } else {
 //            presentErrorView(error: .invalidData)
 //        }
+        if let safeCR = currentCurrencyRates {
+            var ratesArray = Array(safeCR.rates)
+        let itemToMove = ratesArray[indexPath.row]
+        ratesArray.remove(at: indexPath.row)
+        ratesArray.append(itemToMove)
+        
+            let destinationIndexPath = NSIndexPath(row: 0, section: 0)
+            currencyListTableView.moveRow(at: indexPath, to:destinationIndexPath as IndexPath)
+        }
     }
 }
 
