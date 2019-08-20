@@ -29,6 +29,9 @@
 		EF5F8FA9230BBAA700AA913E /* OfflineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */; };
 		EF5F8FAA230BBAA700AA913E /* OfflineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */; };
 		EF5F8FB0230C7EBE00AA913E /* CurrencyListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FAF230C7EBE00AA913E /* CurrencyListPresenterTests.swift */; };
+		EF5F8FB4230C956E00AA913E /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */; };
+		EF5F8FB5230C956E00AA913E /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */; };
+		EF5F8FB6230C956E00AA913E /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */; };
 		EFC94C082306DAA0006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EFC94C092306DAA1006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EFC94C0A2306DAA7006D5191 /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE52306011F00A7000D /* ErrorEntity.swift */; };
@@ -92,6 +95,7 @@
 		EF5F8FA5230B3C8600AA913E /* CurrencyListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListInteractorTest.swift; sourceTree = "<group>"; };
 		EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDataManager.swift; sourceTree = "<group>"; };
 		EF5F8FAF230C7EBE00AA913E /* CurrencyListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListPresenterTests.swift; sourceTree = "<group>"; };
+		EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
 		EFC94C16230A93D6006D5191 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				EF508CA423059D4800A7000D /* AppDelegate.swift */,
+				EF5F8FB2230C953700AA913E /* Extensions */,
 				EF508CD223059FB700A7000D /* Views-Presenters */,
 				EF508CD82305A60A00A7000D /* Interactors */,
 				EF508CDD2305EC7700A7000D /* Entities */,
@@ -263,6 +268,14 @@
 				EF5F8FAF230C7EBE00AA913E /* CurrencyListPresenterTests.swift */,
 			);
 			path = PresenterTests;
+			sourceTree = "<group>";
+		};
+		EF5F8FB2230C953700AA913E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +416,7 @@
 				EF5F8FA8230BBAA700AA913E /* OfflineDataManager.swift in Sources */,
 				EF508CA723059D4800A7000D /* CurrencyListViewController.swift in Sources */,
 				EF508CDA2305A64700A7000D /* CurrencyListInteractor.swift in Sources */,
+				EF5F8FB4230C956E00AA913E /* ErrorExtension.swift in Sources */,
 				EF508CA523059D4800A7000D /* AppDelegate.swift in Sources */,
 				EF508CD62305A0F100A7000D /* CurrencyListViewPresenter.swift in Sources */,
 				EF508CDC2305EC6E00A7000D /* CurrencyRatesEntity.swift in Sources */,
@@ -419,6 +433,7 @@
 				EF508CEA23060FBB00A7000D /* NetworkManagerTest.swift in Sources */,
 				EFC94C18230A93D6006D5191 /* ReachabilityManager.swift in Sources */,
 				EF5F8FA6230B3C8600AA913E /* CurrencyListInteractorTest.swift in Sources */,
+				EF5F8FB5230C956E00AA913E /* ErrorExtension.swift in Sources */,
 				EFC94C0E2306DAAE006D5191 /* CurrencyListInteractor.swift in Sources */,
 				EF508CE823060DAD00A7000D /* ErrorEntityTest.swift in Sources */,
 				EFC94C082306DAA0006D5191 /* NetworkManager.swift in Sources */,
@@ -445,6 +460,7 @@
 				EFC94C0B2306DAA7006D5191 /* ErrorEntity.swift in Sources */,
 				EFC94C0D2306DAAB006D5191 /* CurrencyRatesEntity.swift in Sources */,
 				EF5F8FAA230BBAA700AA913E /* OfflineDataManager.swift in Sources */,
+				EF5F8FB6230C956E00AA913E /* ErrorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
