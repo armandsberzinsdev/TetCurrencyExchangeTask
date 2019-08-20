@@ -27,7 +27,7 @@ class CurrencyListInteractor {
         }
         let errorHandler: (ErrorEntity) -> Void = { (networkManagerError) in
             if networkManagerError == .noNetwork {
-               // self.currencyListInteractorDelegate?.getCurrencyRatesToDisplay(currecnyRates: OfflineDataManager.loadPreviousCurrencyRates())
+                self.currencyListInteractorDelegate?.getCurrencyRatesToDisplay(currencyRates: OfflineDataManager.loadPreviousCurrencyRates())
             }
             self.currencyListInteractorDelegate?.errorDetected(error: networkManagerError)
         }
@@ -50,7 +50,7 @@ class CurrencyListInteractor {
             
             if !validCurrencyRates.isEmpty {
                 let validCurrencyRateEntity = CurrencyRatesEntity(rates: validCurrencyRates, base: currencyRates.base, date: currencyRates.date)
-              //  LocalDataManager.saveHeadlineEntities(allHeadlines: allValidHeadlines)
+                OfflineDataManager.saveCurrencyRateData(withThisEntity: validCurrencyRateEntity)
                 self.currencyListInteractorDelegate?.getCurrencyRatesToDisplay(currencyRates: validCurrencyRateEntity)
             }
         } else {

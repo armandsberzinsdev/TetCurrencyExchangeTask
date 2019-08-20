@@ -24,7 +24,8 @@ class CurrencyListPresenter {
 
 extension CurrencyListPresenter: CurrencyListInteractorDelegate {
     func getCurrencyRatesToDisplay(currencyRates: CurrencyRatesEntity) {
-        print("aaa")
+        print(currencyRates)
+        
     }
     
     func errorDetected(error: ErrorEntity) {
