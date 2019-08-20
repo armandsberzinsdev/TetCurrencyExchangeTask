@@ -21,7 +21,7 @@ struct OfflineDataManager {
         }
     }
     
-    static func loadAllHeadlines() -> CurrencyRatesEntity {
+    static func loadPreviousCurrencyRates() -> CurrencyRatesEntity {
         do {
             let data = try Data(contentsOf: currencyRatesDataLocalUrl())
             let decoder = JSONDecoder()
