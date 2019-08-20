@@ -10,14 +10,9 @@ import Foundation
 typealias NetworkCompletionHandler = (Data?, URLResponse?, Error?) -> Void
 typealias ErrorHandler = (ErrorEntity) -> Void
 
-
 class NetworkManager {
-    
-    var activeRequests: [String: Date] = [:]
-    
     enum TetCurrencyEndpoints: String {
         case getCurrecyRates = "https://api.exchangeratesapi.io/latest?base=EUR"
-
     }
     
     func prepareUrlWith(stringToConvert: String) -> URL? {
@@ -60,7 +55,6 @@ class NetworkManager {
             if let validUrl = prepareUrlWith(stringToConvert: urlString) {
                 var request = URLRequest(url: validUrl)
                 request.allHTTPHeaderFields = headers
-              //  activeRequests.updateValue(Date(), forKey: urlString)
                 URLSession.shared.dataTask(with: request, completionHandler: completionHandler).resume()
             } else {
                 errorHandler(.wrongUrl)
