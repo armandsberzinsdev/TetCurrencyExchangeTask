@@ -11,7 +11,6 @@ import XCTest
 @testable import Tet_Currency
 
 class CurrencyListInteractorTest: XCTestCase, CurrencyListInteractorDelegate {
-/*TODO: Add tests for offline mode */
 
     var currencyListInteractor: CurrencyListInteractor!
     var fakeNetworkManager = FakeNetworkManager()

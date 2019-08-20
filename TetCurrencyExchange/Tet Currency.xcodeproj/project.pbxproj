@@ -28,6 +28,7 @@
 		EF5F8FA8230BBAA700AA913E /* OfflineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */; };
 		EF5F8FA9230BBAA700AA913E /* OfflineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */; };
 		EF5F8FAA230BBAA700AA913E /* OfflineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */; };
+		EF5F8FB0230C7EBE00AA913E /* CurrencyListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FAF230C7EBE00AA913E /* CurrencyListPresenterTests.swift */; };
 		EFC94C082306DAA0006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EFC94C092306DAA1006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EFC94C0A2306DAA7006D5191 /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE52306011F00A7000D /* ErrorEntity.swift */; };
@@ -90,6 +91,7 @@
 		EF508CED2306115700A7000D /* FakeInvalidJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeInvalidJson.json; sourceTree = "<group>"; };
 		EF5F8FA5230B3C8600AA913E /* CurrencyListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListInteractorTest.swift; sourceTree = "<group>"; };
 		EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDataManager.swift; sourceTree = "<group>"; };
+		EF5F8FAF230C7EBE00AA913E /* CurrencyListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListPresenterTests.swift; sourceTree = "<group>"; };
 		EFC94C16230A93D6006D5191 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				EF508CB923059D4A00A7000D /* TetCurrencyExchangeTests.swift */,
+				EF5F8FB1230C7EC400AA913E /* PresenterTests */,
 				EF5F8FA4230B3B9C00AA913E /* InteractorsTests */,
 				EF508CEB23060FC700A7000D /* ManagerTests */,
 				EF508CE02305F03000A7000D /* EntityTests */,
@@ -252,6 +255,14 @@
 				EF5F8FA5230B3C8600AA913E /* CurrencyListInteractorTest.swift */,
 			);
 			path = InteractorsTests;
+			sourceTree = "<group>";
+		};
+		EF5F8FB1230C7EC400AA913E /* PresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F8FAF230C7EBE00AA913E /* CurrencyListPresenterTests.swift */,
+			);
+			path = PresenterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +422,7 @@
 				EFC94C0E2306DAAE006D5191 /* CurrencyListInteractor.swift in Sources */,
 				EF508CE823060DAD00A7000D /* ErrorEntityTest.swift in Sources */,
 				EFC94C082306DAA0006D5191 /* NetworkManager.swift in Sources */,
+				EF5F8FB0230C7EBE00AA913E /* CurrencyListPresenterTests.swift in Sources */,
 				EF508CBA23059D4A00A7000D /* TetCurrencyExchangeTests.swift in Sources */,
 				EF508CE22305F0B700A7000D /* CurrencyRatesEntityTest.swift in Sources */,
 				EFC94C0C2306DAAA006D5191 /* CurrencyRatesEntity.swift in Sources */,
