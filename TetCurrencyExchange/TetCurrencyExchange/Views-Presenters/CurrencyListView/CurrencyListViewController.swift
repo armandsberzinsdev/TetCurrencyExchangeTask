@@ -21,5 +21,13 @@ class CurrencyListViewController: UIViewController {
 }
 
 extension CurrencyListViewController: CurrencyListPresenterDelegate {
+    func updateCurrencyListData(with currencyRates: CurrencyRatesEntity) {
+        print("aaa")
+    }
+    
+    func presentErrorView(error: ErrorEntity) {
+        print("bbb")
+    }
+    
 
 }
