@@ -41,7 +41,7 @@ class CurrencyListInteractor {
     func validateRatesAndUpdatePresenter(with currencyRates: CurrencyRatesEntity) -> Void {
         if !currencyRates.rates.isEmpty {
             let validCurrencyRates = currencyRates.rates.filter { (currencyRate) -> Bool in
-                if currencyRate.key.count == 3 && currencyRate.value < 0 {
+                if currencyRate.key.count == 3 && currencyRate.value > 0 {
                     return true
                 } else {
                     return false
