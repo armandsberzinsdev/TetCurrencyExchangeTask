@@ -19,9 +19,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ek1-Io-Whk">
-                        <rect key="frame" x="10" y="11" width="303" height="53"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ek1-Io-Whk" customClass="CellBackgroundView" customModule="Tet_Currency" customModuleProvider="target">
+                        <rect key="frame" x="10" y="5" width="300" height="59.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="rate_value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95t-DR-Ejc">
                                 <rect key="frame" x="151" y="16" width="76" height="21"/>
@@ -52,9 +51,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.27436124449999999" green="0.31389149179999998" blue="0.4821081606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Ek1-Io-Whk" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="6qh-Wk-kNs"/>
+                    <constraint firstItem="Ek1-Io-Whk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="85s-pv-SOA"/>
+                    <constraint firstAttribute="bottom" secondItem="Ek1-Io-Whk" secondAttribute="bottom" constant="5" id="cWd-WH-j2Z"/>
+                    <constraint firstAttribute="trailing" secondItem="Ek1-Io-Whk" secondAttribute="trailing" constant="10" id="m9a-dv-Bfu"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

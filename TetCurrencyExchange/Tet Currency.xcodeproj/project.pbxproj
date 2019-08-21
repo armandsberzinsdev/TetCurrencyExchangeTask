@@ -44,6 +44,9 @@
 		EF5F8FC7230D10BF00AA913E /* UIColor+TetColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FC6230D10BF00AA913E /* UIColor+TetColours.swift */; };
 		EF5F8FC8230D10BF00AA913E /* UIColor+TetColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FC6230D10BF00AA913E /* UIColor+TetColours.swift */; };
 		EF5F8FC9230D10BF00AA913E /* UIColor+TetColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FC6230D10BF00AA913E /* UIColor+TetColours.swift */; };
+		EF6636CD230DA407002D60C6 /* CellBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636CC230DA407002D60C6 /* CellBackgroundView.swift */; };
+		EF6636CE230DA407002D60C6 /* CellBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636CC230DA407002D60C6 /* CellBackgroundView.swift */; };
+		EF6636CF230DA407002D60C6 /* CellBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636CC230DA407002D60C6 /* CellBackgroundView.swift */; };
 		EFC94C082306DAA0006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EFC94C092306DAA1006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EFC94C0A2306DAA7006D5191 /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE52306011F00A7000D /* ErrorEntity.swift */; };
@@ -112,6 +115,7 @@
 		EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyListTableViewCell.xib; sourceTree = "<group>"; };
 		EF5F8FC2230D0FCB00AA913E /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		EF5F8FC6230D10BF00AA913E /* UIColor+TetColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+TetColours.swift"; sourceTree = "<group>"; };
+		EF6636CC230DA407002D60C6 /* CellBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackgroundView.swift; sourceTree = "<group>"; };
 		EFC94C16230A93D6006D5191 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -301,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				EF5F8FB8230C9B8300AA913E /* CurrencyListTableViewCell.swift */,
+				EF6636CC230DA407002D60C6 /* CellBackgroundView.swift */,
 				EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */,
 			);
 			path = CurrencyListComponents;
@@ -447,6 +452,7 @@
 				EF5F8FA8230BBAA700AA913E /* OfflineDataManager.swift in Sources */,
 				EF508CA723059D4800A7000D /* CurrencyListViewController.swift in Sources */,
 				EF508CDA2305A64700A7000D /* CurrencyListInteractor.swift in Sources */,
+				EF6636CD230DA407002D60C6 /* CellBackgroundView.swift in Sources */,
 				EF5F8FC3230D0FCC00AA913E /* UIApplicationExtension.swift in Sources */,
 				EF5F8FB4230C956E00AA913E /* ErrorExtension.swift in Sources */,
 				EF5F8FBA230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */,
@@ -463,6 +469,7 @@
 			files = (
 				EFC94C142306DABB006D5191 /* AppDelegate.swift in Sources */,
 				EF5F8FC8230D10BF00AA913E /* UIColor+TetColours.swift in Sources */,
+				EF6636CE230DA407002D60C6 /* CellBackgroundView.swift in Sources */,
 				EFC94C122306DAB6006D5191 /* CurrencyListViewController.swift in Sources */,
 				EF5F8FBB230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */,
 				EFC94C102306DAB2006D5191 /* CurrencyListViewPresenter.swift in Sources */,
@@ -489,6 +496,7 @@
 			files = (
 				EFC94C152306DABC006D5191 /* AppDelegate.swift in Sources */,
 				EFC94C112306DAB3006D5191 /* CurrencyListViewPresenter.swift in Sources */,
+				EF6636CF230DA407002D60C6 /* CellBackgroundView.swift in Sources */,
 				EFC94C132306DAB6006D5191 /* CurrencyListViewController.swift in Sources */,
 				EFC94C092306DAA1006D5191 /* NetworkManager.swift in Sources */,
 				EF5F8FBC230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */,
