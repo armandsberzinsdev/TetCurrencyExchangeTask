@@ -32,7 +32,7 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
         currencyListTableView.register(UINib.init(nibName: "CurrencyListTableViewCell", bundle: nil), forCellReuseIdentifier: "CurrecyRateCell")
     }
 
-
+//255AF5
 }
 
 extension CurrencyListViewController: UITableViewDelegate {
