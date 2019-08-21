@@ -14,6 +14,7 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
     let uiPresenter = CurrencyListPresenter()
     weak var uiPresenterDelegate: CurrencyListPresenterDelegate?
     var currentCurrencyRates: CurrencyRatesEntity?
+    var currencyRatesOnly: Array<(key: String, value: Double)> = []
 //
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(true)
@@ -50,10 +51,10 @@ extension CurrencyListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrecyRateCell") as! CurrencyListTableViewCell
         if let safeCR = currentCurrencyRates {
-        let ratesArray = Array(safeCR.rates)
-         ratesArray[indexPath.row]
-            cell.rateKeyLbl.text = ratesArray[indexPath.row].key
-            cell.rateValueLbl.text = "\(ratesArray[indexPath.row].value)"
+        //let ratesArray = Array(safeCR.rates)
+        // self.currencyRatesOnly[indexPath.row]
+            cell.rateKeyLbl.text = self.currencyRatesOnly[indexPath.row].key
+            cell.rateValueLbl.text = "\(self.currencyRatesOnly[indexPath.row].value)"
             if indexPath.row > 0 {
             cell.currencyInuptField.isHidden = true
             }
@@ -76,13 +77,15 @@ extension CurrencyListViewController: UITableViewDelegate {
         selectedCell.currencyInuptField.isHidden = false
         selectedCell.currencyInuptField.becomeFirstResponder()
         if let safeCR = currentCurrencyRates {
-            var ratesArray = Array(safeCR.rates)
-        let itemToMove = ratesArray[indexPath.row]
-        ratesArray.remove(at: indexPath.row)
-        ratesArray.append(itemToMove)
+        let itemToMove = self.currencyRatesOnly[indexPath.row]
+        self.currencyRatesOnly.remove(at: indexPath.row)
+        self.currencyRatesOnly.insert(itemToMove, at: 0)
         
             let destinationIndexPath = NSIndexPath(row: 0, section: 0)
             currencyListTableView.moveRow(at: indexPath, to:destinationIndexPath as IndexPath)
+        //    let singleIndexPath = IndexPath(row: 1, section: 0)
+        //    self.currencyListTableView.reloadRows(at: [singleIndexPath], with: .none)
+           // self.currencyListTableView.reloadData()
         }
     }
 }
@@ -90,6 +93,9 @@ extension CurrencyListViewController: UITableViewDelegate {
 extension CurrencyListViewController: CurrencyListPresenterDelegate {
     func updateCurrencyListData(with currencyRates: CurrencyRatesEntity) {
         self.currentCurrencyRates = currencyRates
+       // if let safeCR = currencyRates {
+             self.currencyRatesOnly = Array(currencyRates.rates)
+       // }
         self.currencyListTableView.reloadData()
     }
     
