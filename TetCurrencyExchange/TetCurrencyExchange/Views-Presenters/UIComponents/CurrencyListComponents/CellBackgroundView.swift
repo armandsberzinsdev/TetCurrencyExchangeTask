@@ -16,7 +16,9 @@ class CellBackgroundView: UIView {
     }
     
     func setupStyle() {
+        /* Background color set from TableViewController CellForRowAtIndex  -
         self.backgroundColor = UIColor.TetColours.tetCurrencyRateBGColour
+         */
         self.layer.cornerRadius = 8
     }
 }

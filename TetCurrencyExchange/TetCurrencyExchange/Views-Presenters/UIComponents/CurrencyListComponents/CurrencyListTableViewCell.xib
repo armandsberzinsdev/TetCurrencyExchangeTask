@@ -26,17 +26,11 @@
                                 <rect key="frame" x="10" y="5" width="280" height="49.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGl-8y-lug" customClass="UserValueToInsertInputField" customModule="Tet_Currency" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="106" height="49.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140.5" height="49.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" € = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6md-n8-Fnp" customClass="CurrencyRateCellUILabels" customModule="Tet_Currency" customModuleProvider="target">
-                                        <rect key="frame" x="106" y="0.0" width="34.5" height="49.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rate_value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95t-DR-Ejc" customClass="CurrencyRateCellUILabels" customModule="Tet_Currency" customModuleProvider="target">
                                         <rect key="frame" x="140.5" y="0.0" width="76" height="49.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
