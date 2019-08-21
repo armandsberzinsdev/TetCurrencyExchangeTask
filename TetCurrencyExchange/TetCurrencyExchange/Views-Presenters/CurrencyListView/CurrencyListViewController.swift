@@ -112,7 +112,9 @@ extension CurrencyListViewController: CurrencyRateCellDelegate {
         self.insertedAmount = userNumber
        // self.currencyListTableView.reloadData()
         for (index, _) in self.currencyRatesOnly.enumerated() {
-            self.currencyListTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .fade)
+            if index > 0 {
+                self.currencyListTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .fade)
+            }
         }
         
     }
