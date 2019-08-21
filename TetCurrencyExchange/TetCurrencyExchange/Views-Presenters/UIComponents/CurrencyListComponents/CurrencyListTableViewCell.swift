@@ -11,6 +11,7 @@ import UIKit
 class CurrencyListTableViewCell: UITableViewCell {
     @IBOutlet weak var rateKeyLbl: UILabel!
     @IBOutlet weak var rateValueLbl: UILabel!
+    @IBOutlet weak var currencyInuptField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()

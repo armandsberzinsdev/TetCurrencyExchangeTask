@@ -54,6 +54,9 @@ extension CurrencyListViewController: UITableViewDelegate {
          ratesArray[indexPath.row]
             cell.rateKeyLbl.text = ratesArray[indexPath.row].key
             cell.rateValueLbl.text = "\(ratesArray[indexPath.row].value)"
+            if indexPath.row > 0 {
+            cell.currencyInuptField.isHidden = true
+            }
         }
         return cell
     }
@@ -69,6 +72,9 @@ extension CurrencyListViewController: UITableViewDelegate {
 //        } else {
 //            presentErrorView(error: .invalidData)
 //        }
+        let selectedCell = currencyListTableView.cellForRow(at: indexPath) as! CurrencyListTableViewCell
+        selectedCell.currencyInuptField.isHidden = false
+        selectedCell.currencyInuptField.becomeFirstResponder()
         if let safeCR = currentCurrencyRates {
             var ratesArray = Array(safeCR.rates)
         let itemToMove = ratesArray[indexPath.row]
