@@ -13,8 +13,10 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
 
     let uiPresenter = CurrencyListPresenter()
     weak var uiPresenterDelegate: CurrencyListPresenterDelegate?
+    weak var currencyRateCellDelegate: CurrencyListInteractorDelegate?
     var currentCurrencyRates: CurrencyRatesEntity?
     var currencyRatesOnly: Array<(key: String, value: Double)> = []
+    var insertedAmount: Double = 1
 //
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(true)
@@ -50,11 +52,12 @@ extension CurrencyListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrecyRateCell") as! CurrencyListTableViewCell
+        cell.currencyRateCellDelegate = self
         if let safeCR = currentCurrencyRates {
         //let ratesArray = Array(safeCR.rates)
         // self.currencyRatesOnly[indexPath.row]
             cell.rateKeyLbl.text = self.currencyRatesOnly[indexPath.row].key
-            cell.rateValueLbl.text = "\(self.currencyRatesOnly[indexPath.row].value)"
+            cell.rateValueLbl.text = "\(self.currencyRatesOnly[indexPath.row].value * self.insertedAmount)"
             if indexPath.row > 0 {
             cell.currencyInuptField.isHidden = true
             }
@@ -102,6 +105,15 @@ extension CurrencyListViewController: CurrencyListPresenterDelegate {
     func presentErrorView(error: ErrorEntity) {
         error.alert(with: self)
     }
-    
+}
 
+extension CurrencyListViewController: CurrencyRateCellDelegate {
+    func updateUserInput(with userNumber: Double) {
+        self.insertedAmount = userNumber
+       // self.currencyListTableView.reloadData()
+        for (index, _) in self.currencyRatesOnly.enumerated() {
+            self.currencyListTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .fade)
+        }
+        
+    }
 }
