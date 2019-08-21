@@ -30,6 +30,13 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
         currencyListTableView.delegate = self
         currencyListTableView.dataSource = self
         currencyListTableView.register(UINib.init(nibName: "CurrencyListTableViewCell", bundle: nil), forCellReuseIdentifier: "CurrecyRateCell")
+        let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "tetLogo.png")
+        imageView.image = image
+        logoContainer.addSubview(imageView)
+        navigationItem.titleView = logoContainer
     }
 
 //255AF5
