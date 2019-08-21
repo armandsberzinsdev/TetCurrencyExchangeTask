@@ -16,7 +16,7 @@ class CellBackgroundView: UIView {
     }
     
     func setupStyle() {
-        self.backgroundColor = #colorLiteral(red: 0.8831958175, green: 0.8831958175, blue: 0.8831958175, alpha: 1)
+        self.backgroundColor = UIColor.TetColours.tetCurrencyRateBGColour
         self.layer.cornerRadius = 8
     }
 }
