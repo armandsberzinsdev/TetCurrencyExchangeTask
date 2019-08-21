@@ -16,11 +16,14 @@ class CurrencyListTableViewCell: UITableViewCell {
     @IBOutlet weak var rateKeyLbl: UILabel!
     @IBOutlet weak var rateValueLbl: UILabel!
     @IBOutlet weak var currencyInuptField: UITextField!
+    @IBOutlet weak var cellBgView: CellBackgroundView!
+    
     var currencyRateCellDelegate: CurrencyRateCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         currencyInuptField.delegate = self
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

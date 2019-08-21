@@ -1,5 +1,5 @@
 //
-//  CellBackgroundView.swift
+//  CurrencyRateCellUILabels.swift
 //  Tet Currency
 //
 //  Created by armands.berzins on 21/08/2019.
@@ -8,16 +8,14 @@
 
 import UIKit
 
-class CellBackgroundView: UIView {
+class CurrencyRateCellUILabels: UILabel {
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupStyle()
     }
-    
+
     func setupStyle() {
-        self.backgroundColor = #colorLiteral(red: 0.8831958175, green: 0.8831958175, blue: 0.8831958175, alpha: 1)
-        self.layer.cornerRadius = 8
+        self.font = UIFont.TetCurrencyAppFonts.mainFont(ofSize: 40)
     }
 }
-

@@ -41,8 +41,6 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
         logoContainer.addSubview(imageView)
         navigationItem.titleView = logoContainer
     }
-
-//255AF5
 }
 
 extension CurrencyListViewController: UITableViewDelegate {
@@ -53,13 +51,18 @@ extension CurrencyListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CurrecyRateCell") as! CurrencyListTableViewCell
         cell.currencyRateCellDelegate = self
-        if let safeCR = currentCurrencyRates {
+        if currentCurrencyRates != nil {
         //let ratesArray = Array(safeCR.rates)
         // self.currencyRatesOnly[indexPath.row]
             cell.rateKeyLbl.text = self.currencyRatesOnly[indexPath.row].key
-            cell.rateValueLbl.text = "\(self.currencyRatesOnly[indexPath.row].value * self.insertedAmount)"
+            let calculatedRate = String(format: "%.4f ", self.currencyRatesOnly[indexPath.row].value * self.insertedAmount)
+            cell.rateValueLbl.text = calculatedRate
             if indexPath.row > 0 {
             cell.currencyInuptField.isHidden = true
+            } else {
+                cell.cellBgView.backgroundColor = UIColor.TetColours.tetMainColor
+                cell.rateKeyLbl.textColor = UIColor.TetColours.tetTintColor
+                cell.rateValueLbl.textColor = UIColor.TetColours.tetTintColor
             }
         }
         return cell
@@ -79,7 +82,7 @@ extension CurrencyListViewController: UITableViewDelegate {
         let selectedCell = currencyListTableView.cellForRow(at: indexPath) as! CurrencyListTableViewCell
         selectedCell.currencyInuptField.isHidden = false
         selectedCell.currencyInuptField.becomeFirstResponder()
-        if let safeCR = currentCurrencyRates {
+        if currentCurrencyRates != nil {
         let itemToMove = self.currencyRatesOnly[indexPath.row]
         self.currencyRatesOnly.remove(at: indexPath.row)
         self.currencyRatesOnly.insert(itemToMove, at: 0)
