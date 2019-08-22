@@ -18,12 +18,7 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
     var loadingView: LoadingView!
     var currencyRatesOnly: Array<(key: String, value: Double)> = []
     var insertedAmount: Double = 1
-//
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(true)
-//        uiPresenter.viewControllerDidAppear()
-//    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         showLoading()
@@ -60,36 +55,16 @@ extension CurrencyListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrecyRateCell") as! CurrencyListTableViewCell
+        var cell = tableView.dequeueReusableCell(withIdentifier: "CurrecyRateCell") as! CurrencyListTableViewCell
         cell.currencyRateCellDelegate = self
         if currentCurrencyRates != nil {
-        //let ratesArray = Array(safeCR.rates)
-        // self.currencyRatesOnly[indexPath.row]
             cell.rateKeyLbl.text = self.currencyRatesOnly[indexPath.row].key
-            var calculatedRate = String(format: " € = %.2f ", self.currencyRatesOnly[indexPath.row].value * self.insertedAmount)
-            calculatedRate = calculatedRate.replacingOccurrences(of: ".", with: ",")
-            cell.rateValueLbl.text = calculatedRate
+            cell.rateValueLbl.text = formatCurrencyText(index: indexPath.row)
             cell.flgLbl.text = String.getEmoji(for: self.currencyRatesOnly[indexPath.row].key)
             if indexPath.row > 0 {
-                cell.currencyInuptField.isEnabled = false
-                cell.cellBgView.backgroundColor = UIColor.TetColours.tetCurrencyRateBGColour
-                cell.rateKeyLbl.textColor = UIColor.TetColours.tetCurrencyRateInactiveTextColour
-                cell.rateValueLbl.textColor = UIColor.TetColours.tetCurrencyRateInactiveTextColour
-                cell.currencyInuptField.textColor = UIColor.TetColours.tetCurrencyRateInactiveTextColour
-                var formattedInsertedAmount = String(self.insertedAmount)
-                if formattedInsertedAmount.contains(".0") {
-                    formattedInsertedAmount = String(formattedInsertedAmount.dropLast(2))
-                }
-                formattedInsertedAmount = formattedInsertedAmount.replacingOccurrences(of: ".", with: ",")
-                cell.rateValueLbl.text = calculatedRate
-                cell.currencyInuptField.text = formattedInsertedAmount
+                cell = unselectedCellStyling(for: cell, rate: cell.rateValueLbl.text!)
             } else {
-                cell.currencyInuptField.isEnabled = true
-                cell.cellBgView.backgroundColor = UIColor.TetColours.tetMainColor
-                cell.rateKeyLbl.textColor = UIColor.TetColours.tetTintColor
-                cell.rateValueLbl.textColor = UIColor.TetColours.tetTintColor
-                cell.currencyInuptField.textColor = UIColor.TetColours.tetTintColor
-                cell.currencyInuptField.becomeFirstResponder()
+                cell = selectedCellStyling(for: cell)
             }
         }
         return cell
@@ -100,12 +75,6 @@ extension CurrencyListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        if let selectedHeadline = self.allHeadlines?.headlines[indexPath.row] {
-//            presenter.navigateToHeadlineDetails(from: self, with: selectedHeadline)
-//        } else {
-//            presentErrorView(error: .invalidData)
-//        }
         let selectedCell = currencyListTableView.cellForRow(at: indexPath) as! CurrencyListTableViewCell
         selectedCell.currencyInuptField.isEnabled = true
         selectedCell.currencyInuptField.becomeFirstResponder()
@@ -128,18 +97,47 @@ extension CurrencyListViewController: UITableViewDelegate {
         for (index, _) in self.currencyRatesOnly.enumerated() {
             if index > 0 {
                 self.currencyListTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
+            }
         }
     }
+    
+    func unselectedCellStyling(for cell: CurrencyListTableViewCell, rate: String) -> CurrencyListTableViewCell {
+        cell.currencyInuptField.isEnabled = false
+        cell.cellBgView.backgroundColor = UIColor.TetColours.tetCurrencyRateBGColour
+        cell.rateKeyLbl.textColor = UIColor.TetColours.tetCurrencyRateInactiveTextColour
+        cell.rateValueLbl.textColor = UIColor.TetColours.tetCurrencyRateInactiveTextColour
+        cell.currencyInuptField.textColor = UIColor.TetColours.tetCurrencyRateInactiveTextColour
+        var formattedInsertedAmount = String(self.insertedAmount)
+        if formattedInsertedAmount.contains(".0") {
+            formattedInsertedAmount = String(formattedInsertedAmount.dropLast(2))
+        }
+        formattedInsertedAmount = formattedInsertedAmount.replacingOccurrences(of: ".", with: ",")
+        cell.rateValueLbl.text = rate
+        cell.currencyInuptField.text = formattedInsertedAmount
+        return cell
     }
-  //  }
+    
+    func selectedCellStyling(for cell: CurrencyListTableViewCell) -> CurrencyListTableViewCell {
+        cell.currencyInuptField.isEnabled = true
+        cell.cellBgView.backgroundColor = UIColor.TetColours.tetMainColor
+        cell.rateKeyLbl.textColor = UIColor.TetColours.tetTintColor
+        cell.rateValueLbl.textColor = UIColor.TetColours.tetTintColor
+        cell.currencyInuptField.textColor = UIColor.TetColours.tetTintColor
+        cell.currencyInuptField.becomeFirstResponder()
+        return cell
+    }
+    
+    func formatCurrencyText(index: Int) -> String {
+        var formattedText = String(format: " € = %.2f ", self.currencyRatesOnly[index].value * self.insertedAmount)
+        formattedText = formattedText.replacingOccurrences(of: ".", with: ",")
+        return formattedText
+    }
 }
 
 extension CurrencyListViewController: CurrencyListPresenterDelegate {
     func updateCurrencyListData(with currencyRates: CurrencyRatesEntity) {
         self.currentCurrencyRates = currencyRates
-       // if let safeCR = currencyRates {
         self.currencyRatesOnly = Array(currencyRates.rates).sorted(by: { $0.key < $1.key })
-       // }
         self.currencyListTableView.reloadData()
         hideLoading()
     }
@@ -153,21 +151,8 @@ extension CurrencyListViewController: CurrencyListPresenterDelegate {
 extension CurrencyListViewController: CurrencyRateCellDelegate {
     func updateUserInput(with userNumber: Double) {
         self.insertedAmount = userNumber
-        //        selectedCell.rateValueLbl.text = String(format: " € = %.4f ", self.currencyRatesOnly[indexPath.row].value * self.insertedAmount)
-       // self.currencyListTableView.reloadData()
-//        for (index, _) in self.currencyRatesOnly.enumerated() {
-//            if index > 0 {
-//                self.currencyListTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .fade)
-//            }
-            let cell = self.currencyListTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! CurrencyListTableViewCell
-//            cell.cellBgView.backgroundColor = UIColor.TetColours.tetMainColor
-//            cell.rateKeyLbl.textColor = UIColor.TetColours.tetTintColor
-//            cell.rateValueLbl.textColor = UIColor.TetColours.tetTintColor
-        
-        cell.rateValueLbl.text = String(format: " € = %.2f ", self.currencyRatesOnly[0].value * self.insertedAmount)
-        cell.rateValueLbl.text = cell.rateValueLbl.text?.replacingOccurrences(of: ".", with: ",")
-        
- //       }
+        let cell = self.currencyListTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! CurrencyListTableViewCell
+        cell.rateValueLbl.text = formatCurrencyText(index: 0)
         self.reloadCells()
     }
 }

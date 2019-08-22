@@ -27,9 +27,6 @@ class CurrencyListPresenter {
         self.uiPresenterDelegate?.updateCurrencyListData(with: currencyRates)
     }
     
-//    func refreshCurrencyData() -> Void {
-//        interactor.getCurrencyRates()
-//    }
 }
 
 extension CurrencyListPresenter: CurrencyListInteractorDelegate {
