@@ -63,6 +63,7 @@ extension CurrencyListViewController: UITableViewDelegate {
                 cell.rateKeyLbl.textColor = UIColor.TetColours.tetCurrencyRateInactiveTextColour
                 cell.rateValueLbl.textColor = UIColor.TetColours.tetCurrencyRateInactiveTextColour
                 cell.currencyInuptField.textColor = UIColor.TetColours.tetCurrencyRateInactiveTextColour
+                cell.currencyInuptField.text = String(self.insertedAmount)
             } else {
                 cell.cellBgView.backgroundColor = UIColor.TetColours.tetMainColor
                 cell.rateKeyLbl.textColor = UIColor.TetColours.tetTintColor

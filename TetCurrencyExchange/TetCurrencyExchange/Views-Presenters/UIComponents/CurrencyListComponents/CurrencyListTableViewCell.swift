@@ -35,12 +35,11 @@ class CurrencyListTableViewCell: UITableViewCell {
 
 extension CurrencyListTableViewCell: UITextFieldDelegate {
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool  {
-        if let insertedNumber = Double(textField.text!) {
+        let validtextFieldText = textField.text?.replacingOccurrences(of: ",", with: ".")
+        let validString = string.replacingOccurrences(of: ",", with: ".")
+        if let insertedNumber = Double("\(validtextFieldText ?? "")\(validString)") {
             self.currencyRateCellDelegate?.updateUserInput(with: insertedNumber)
-        } else {
-            print("ERROR: Not a valid number: \(textField.text!)")
         }
-        
         return true
     }
 }
