@@ -58,6 +58,7 @@ extension CurrencyListViewController: UITableViewDelegate {
             var calculatedRate = String(format: " € = %.4f ", self.currencyRatesOnly[indexPath.row].value * self.insertedAmount)
             calculatedRate = calculatedRate.replacingOccurrences(of: ".", with: ",")
             cell.rateValueLbl.text = calculatedRate
+            cell.flgLbl.text = String.getEmoji(for: self.currencyRatesOnly[indexPath.row].key)
             if indexPath.row > 0 {
                 cell.currencyInuptField.isEnabled = false
                 cell.cellBgView.backgroundColor = UIColor.TetColours.tetCurrencyRateBGColour

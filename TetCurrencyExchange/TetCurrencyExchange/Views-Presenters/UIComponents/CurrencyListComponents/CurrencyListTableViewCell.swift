@@ -17,6 +17,7 @@ class CurrencyListTableViewCell: UITableViewCell {
     @IBOutlet weak var rateValueLbl: UILabel!
     @IBOutlet weak var currencyInuptField: UITextField!
     @IBOutlet weak var cellBgView: CellBackgroundView!
+    @IBOutlet weak var flgLbl: UILabel!
     
     var currencyRateCellDelegate: CurrencyRateCellDelegate?
     

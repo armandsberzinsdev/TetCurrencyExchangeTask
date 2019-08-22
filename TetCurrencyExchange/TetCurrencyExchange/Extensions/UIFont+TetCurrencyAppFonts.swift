@@ -13,5 +13,4 @@ extension UIFont {
             return UIFont(name: "BebasNeue-Regular", size: size) ?? UIFont.systemFont(ofSize: size)
         }
     }
-
 }

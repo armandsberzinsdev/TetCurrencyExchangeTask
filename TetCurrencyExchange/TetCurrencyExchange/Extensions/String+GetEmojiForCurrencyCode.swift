@@ -8,11 +8,11 @@
 import Foundation
 
 extension String {
-    func getEmoji(for currencyCode: String) -> String {
+    static func getEmoji(for currencyCode: String) -> String {
         switch currencyCode {
             case "AUD": return "🇦🇺"
             case "BGN": return "🇧🇬"
-            case "BLR": return "🇧🇾"
+            case "BRL": return "🇧🇷"
             case "CAD": return "🇨🇦"
             case "CHF": return "🇨🇭"
             case "CNY": return "🇨🇳"
