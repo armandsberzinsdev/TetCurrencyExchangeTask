@@ -1,9 +1,9 @@
 # Tet Currency Exchange Task
-![alt text]( )
+![alt text](https://github.com/armandsberzinsdev/TetCurrencyExchangeTask/master/Screenshots/iconImage.JPG)
 
 This is Tet job applicants challenge task done by Armands. Even the app is quite simple it has some features for better user experience, improved maintainability and made to be easily scalable. App was made in one week on late evenings after work so it's hard to tell how many actually hours spent on this. Nevertheless, apps works fine and there are many great things about it. There are still many places I would like to improve and some bugs can be found but as far as I can see no matter how good this project would become I would still see a room for improvement even if it would exceed requirements too much. More about possible improvements see Features section.
 
-![alt text]( )
+![alt text](https://github.com/armandsberzinsdev/TetCurrencyExchangeTask/master/Screenshots/stickedTogetherTet.jpg)
 
 ### Clone and branching:
 GIT is organised by storing release in Master branch. Master branch is supposed to be tested version with passed Unit Tests.
