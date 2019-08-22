@@ -30,6 +30,10 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
         currencyListTableView.delegate = self
         currencyListTableView.dataSource = self
         currencyListTableView.register(UINib.init(nibName: "CurrencyListTableViewCell", bundle: nil), forCellReuseIdentifier: "CurrecyRateCell")
+        setupNavBarTitle()
+    }
+    
+    func setupNavBarTitle() -> Void {
         let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
         imageView.contentMode = .scaleAspectFit
@@ -75,25 +79,21 @@ extension CurrencyListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCell = currencyListTableView.cellForRow(at: indexPath) as! CurrencyListTableViewCell
-        selectedCell.currencyInuptField.isEnabled = true
-        selectedCell.currencyInuptField.becomeFirstResponder()
-        selectedCell.cellBgView.backgroundColor = UIColor.TetColours.tetMainColor
-        selectedCell.rateKeyLbl.textColor = UIColor.TetColours.tetTintColor
-        selectedCell.rateValueLbl.textColor = UIColor.TetColours.tetTintColor
-        selectedCell.currencyInuptField.textColor = UIColor.TetColours.tetTintColor
-        if currentCurrencyRates != nil {
-        let itemToMove = self.currencyRatesOnly[indexPath.row]
-        self.currencyRatesOnly.remove(at: indexPath.row)
-        self.currencyRatesOnly.insert(itemToMove, at: 0)
-        
-            let destinationIndexPath = NSIndexPath(row: 0, section: 0)
-            currencyListTableView.moveRow(at: indexPath, to:destinationIndexPath as IndexPath)
-            reloadCells()
-        }
+        var selectedCell = currencyListTableView.cellForRow(at: indexPath) as! CurrencyListTableViewCell
+        selectedCell = selectedCellStyling(for: selectedCell)
+        moveSelectCellToTop(from: indexPath)
     }
     
-    func reloadCells() {
+    func moveSelectCellToTop(from index: IndexPath) {
+        let itemToMove = self.currencyRatesOnly[index.row]
+        self.currencyRatesOnly.remove(at: index.row)
+        self.currencyRatesOnly.insert(itemToMove, at: 0)
+        let destinationIndexPath = NSIndexPath(row: 0, section: 0)
+        currencyListTableView.moveRow(at: index, to:destinationIndexPath as IndexPath)
+        reloadUnselectedCells()
+    }
+    
+    func reloadUnselectedCells() {
         for (index, _) in self.currencyRatesOnly.enumerated() {
             if index > 0 {
                 self.currencyListTableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
@@ -153,6 +153,6 @@ extension CurrencyListViewController: CurrencyRateCellDelegate {
         self.insertedAmount = userNumber
         let cell = self.currencyListTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! CurrencyListTableViewCell
         cell.rateValueLbl.text = formatCurrencyText(index: 0)
-        self.reloadCells()
+        self.reloadUnselectedCells()
     }
 }
