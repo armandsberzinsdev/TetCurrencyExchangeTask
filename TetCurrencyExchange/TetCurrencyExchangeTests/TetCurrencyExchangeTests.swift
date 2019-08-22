@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import TetCurrencyExchange
+@testable import Tet_Currency
 
 class TetCurrencyExchangeTests: XCTestCase {
 
