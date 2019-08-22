@@ -9,7 +9,7 @@
 import Foundation
 
 struct CurrencyRatesEntity: Codable {
-    let rates: [String: Double]
+    var rates: [String: Double]
     let base, date: String
 }
 

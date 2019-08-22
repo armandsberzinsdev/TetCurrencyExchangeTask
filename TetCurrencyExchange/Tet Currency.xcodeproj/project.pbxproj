@@ -28,6 +28,46 @@
 		EF5F8FA8230BBAA700AA913E /* OfflineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */; };
 		EF5F8FA9230BBAA700AA913E /* OfflineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */; };
 		EF5F8FAA230BBAA700AA913E /* OfflineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */; };
+		EF5F8FB0230C7EBE00AA913E /* CurrencyListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FAF230C7EBE00AA913E /* CurrencyListPresenterTests.swift */; };
+		EF5F8FB4230C956E00AA913E /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */; };
+		EF5F8FB5230C956E00AA913E /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */; };
+		EF5F8FB6230C956E00AA913E /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */; };
+		EF5F8FBA230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB8230C9B8300AA913E /* CurrencyListTableViewCell.swift */; };
+		EF5F8FBB230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB8230C9B8300AA913E /* CurrencyListTableViewCell.swift */; };
+		EF5F8FBC230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FB8230C9B8300AA913E /* CurrencyListTableViewCell.swift */; };
+		EF5F8FBD230C9B8300AA913E /* CurrencyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */; };
+		EF5F8FC0230CA09F00AA913E /* CurrencyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */; };
+		EF5F8FC1230CA09F00AA913E /* CurrencyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */; };
+		EF5F8FC3230D0FCC00AA913E /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FC2230D0FCB00AA913E /* UIApplicationExtension.swift */; };
+		EF5F8FC4230D0FCC00AA913E /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FC2230D0FCB00AA913E /* UIApplicationExtension.swift */; };
+		EF5F8FC5230D0FCC00AA913E /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FC2230D0FCB00AA913E /* UIApplicationExtension.swift */; };
+		EF5F8FC7230D10BF00AA913E /* UIColor+TetColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FC6230D10BF00AA913E /* UIColor+TetColours.swift */; };
+		EF5F8FC8230D10BF00AA913E /* UIColor+TetColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FC6230D10BF00AA913E /* UIColor+TetColours.swift */; };
+		EF5F8FC9230D10BF00AA913E /* UIColor+TetColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8FC6230D10BF00AA913E /* UIColor+TetColours.swift */; };
+		EF6636CD230DA407002D60C6 /* CellBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636CC230DA407002D60C6 /* CellBackgroundView.swift */; };
+		EF6636CE230DA407002D60C6 /* CellBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636CC230DA407002D60C6 /* CellBackgroundView.swift */; };
+		EF6636CF230DA407002D60C6 /* CellBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636CC230DA407002D60C6 /* CellBackgroundView.swift */; };
+		EF6636D1230DC9A9002D60C6 /* UIFont+TetCurrencyAppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636D0230DC9A9002D60C6 /* UIFont+TetCurrencyAppFonts.swift */; };
+		EF6636D2230DC9A9002D60C6 /* UIFont+TetCurrencyAppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636D0230DC9A9002D60C6 /* UIFont+TetCurrencyAppFonts.swift */; };
+		EF6636D3230DC9A9002D60C6 /* UIFont+TetCurrencyAppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636D0230DC9A9002D60C6 /* UIFont+TetCurrencyAppFonts.swift */; };
+		EF6636D9230DCC4D002D60C6 /* UserValueToInsertInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636D8230DCC4D002D60C6 /* UserValueToInsertInputField.swift */; };
+		EF6636DA230DCC4D002D60C6 /* UserValueToInsertInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636D8230DCC4D002D60C6 /* UserValueToInsertInputField.swift */; };
+		EF6636DB230DCC4D002D60C6 /* UserValueToInsertInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636D8230DCC4D002D60C6 /* UserValueToInsertInputField.swift */; };
+		EF6636DD230DCEA3002D60C6 /* BebasNeue-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF6636DC230DCEA3002D60C6 /* BebasNeue-Regular.otf */; };
+		EF6636DE230DCEA3002D60C6 /* BebasNeue-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF6636DC230DCEA3002D60C6 /* BebasNeue-Regular.otf */; };
+		EF6636DF230DCEA3002D60C6 /* BebasNeue-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EF6636DC230DCEA3002D60C6 /* BebasNeue-Regular.otf */; };
+		EF6636E1230DCF7D002D60C6 /* CurrencyRateCellUILabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636E0230DCF7D002D60C6 /* CurrencyRateCellUILabels.swift */; };
+		EF6636E2230DCF7D002D60C6 /* CurrencyRateCellUILabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636E0230DCF7D002D60C6 /* CurrencyRateCellUILabels.swift */; };
+		EF6636E3230DCF7D002D60C6 /* CurrencyRateCellUILabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6636E0230DCF7D002D60C6 /* CurrencyRateCellUILabels.swift */; };
+		EFA4CF2A230EF0EC00E6A169 /* String+GetEmojiForCurrencyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4CF29230EF0EC00E6A169 /* String+GetEmojiForCurrencyCode.swift */; };
+		EFA4CF2B230EF0EC00E6A169 /* String+GetEmojiForCurrencyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4CF29230EF0EC00E6A169 /* String+GetEmojiForCurrencyCode.swift */; };
+		EFA4CF2C230EF0EC00E6A169 /* String+GetEmojiForCurrencyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4CF29230EF0EC00E6A169 /* String+GetEmojiForCurrencyCode.swift */; };
+		EFA4CF2E230F0ECF00E6A169 /* CurrencyRateFlagLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4CF2D230F0ECF00E6A169 /* CurrencyRateFlagLabels.swift */; };
+		EFA4CF2F230F0ECF00E6A169 /* CurrencyRateFlagLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4CF2D230F0ECF00E6A169 /* CurrencyRateFlagLabels.swift */; };
+		EFA4CF30230F0ECF00E6A169 /* CurrencyRateFlagLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4CF2D230F0ECF00E6A169 /* CurrencyRateFlagLabels.swift */; };
+		EFA4CF32230F190400E6A169 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4CF31230F190400E6A169 /* LoadingView.swift */; };
+		EFA4CF33230F190400E6A169 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4CF31230F190400E6A169 /* LoadingView.swift */; };
+		EFA4CF34230F190400E6A169 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA4CF31230F190400E6A169 /* LoadingView.swift */; };
 		EFC94C082306DAA0006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EFC94C092306DAA1006D5191 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE32305F40100A7000D /* NetworkManager.swift */; };
 		EFC94C0A2306DAA7006D5191 /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CE52306011F00A7000D /* ErrorEntity.swift */; };
@@ -90,6 +130,20 @@
 		EF508CED2306115700A7000D /* FakeInvalidJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FakeInvalidJson.json; sourceTree = "<group>"; };
 		EF5F8FA5230B3C8600AA913E /* CurrencyListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListInteractorTest.swift; sourceTree = "<group>"; };
 		EF5F8FA7230BBAA700AA913E /* OfflineDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDataManager.swift; sourceTree = "<group>"; };
+		EF5F8FAF230C7EBE00AA913E /* CurrencyListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListPresenterTests.swift; sourceTree = "<group>"; };
+		EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
+		EF5F8FB8230C9B8300AA913E /* CurrencyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListTableViewCell.swift; sourceTree = "<group>"; };
+		EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyListTableViewCell.xib; sourceTree = "<group>"; };
+		EF5F8FC2230D0FCB00AA913E /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		EF5F8FC6230D10BF00AA913E /* UIColor+TetColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+TetColours.swift"; sourceTree = "<group>"; };
+		EF6636CC230DA407002D60C6 /* CellBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackgroundView.swift; sourceTree = "<group>"; };
+		EF6636D0230DC9A9002D60C6 /* UIFont+TetCurrencyAppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+TetCurrencyAppFonts.swift"; sourceTree = "<group>"; };
+		EF6636D8230DCC4D002D60C6 /* UserValueToInsertInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValueToInsertInputField.swift; sourceTree = "<group>"; };
+		EF6636DC230DCEA3002D60C6 /* BebasNeue-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.otf"; sourceTree = "<group>"; };
+		EF6636E0230DCF7D002D60C6 /* CurrencyRateCellUILabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateCellUILabels.swift; sourceTree = "<group>"; };
+		EFA4CF29230EF0EC00E6A169 /* String+GetEmojiForCurrencyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+GetEmojiForCurrencyCode.swift"; sourceTree = "<group>"; };
+		EFA4CF2D230F0ECF00E6A169 /* CurrencyRateFlagLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateFlagLabels.swift; sourceTree = "<group>"; };
+		EFA4CF31230F190400E6A169 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		EFC94C16230A93D6006D5191 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,11 +196,13 @@
 			isa = PBXGroup;
 			children = (
 				EF508CA423059D4800A7000D /* AppDelegate.swift */,
+				EF5F8FB2230C953700AA913E /* Extensions */,
 				EF508CD223059FB700A7000D /* Views-Presenters */,
 				EF508CD82305A60A00A7000D /* Interactors */,
 				EF508CDD2305EC7700A7000D /* Entities */,
 				EF508CD323059FDA00A7000D /* Managers */,
 				EF508CA823059D4800A7000D /* Main.storyboard */,
+				EF6636DC230DCEA3002D60C6 /* BebasNeue-Regular.otf */,
 				EF508CAB23059D4A00A7000D /* Assets.xcassets */,
 				EF508CAD23059D4A00A7000D /* LaunchScreen.storyboard */,
 				EF508CB023059D4A00A7000D /* Info.plist */,
@@ -158,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				EF508CB923059D4A00A7000D /* TetCurrencyExchangeTests.swift */,
+				EF5F8FB1230C7EC400AA913E /* PresenterTests */,
 				EF5F8FA4230B3B9C00AA913E /* InteractorsTests */,
 				EF508CEB23060FC700A7000D /* ManagerTests */,
 				EF508CE02305F03000A7000D /* EntityTests */,
@@ -206,6 +263,8 @@
 		EF508CD72305A5ED00A7000D /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EFA4CF31230F190400E6A169 /* LoadingView.swift */,
+				EF5F8FB7230C9B4100AA913E /* CurrencyListComponents */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -252,6 +311,39 @@
 				EF5F8FA5230B3C8600AA913E /* CurrencyListInteractorTest.swift */,
 			);
 			path = InteractorsTests;
+			sourceTree = "<group>";
+		};
+		EF5F8FB1230C7EC400AA913E /* PresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F8FAF230C7EBE00AA913E /* CurrencyListPresenterTests.swift */,
+			);
+			path = PresenterTests;
+			sourceTree = "<group>";
+		};
+		EF5F8FB2230C953700AA913E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F8FB3230C956E00AA913E /* ErrorExtension.swift */,
+				EF5F8FC2230D0FCB00AA913E /* UIApplicationExtension.swift */,
+				EF5F8FC6230D10BF00AA913E /* UIColor+TetColours.swift */,
+				EF6636D0230DC9A9002D60C6 /* UIFont+TetCurrencyAppFonts.swift */,
+				EFA4CF29230EF0EC00E6A169 /* String+GetEmojiForCurrencyCode.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF5F8FB7230C9B4100AA913E /* CurrencyListComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EF6636CC230DA407002D60C6 /* CellBackgroundView.swift */,
+				EF6636D8230DCC4D002D60C6 /* UserValueToInsertInputField.swift */,
+				EF6636E0230DCF7D002D60C6 /* CurrencyRateCellUILabels.swift */,
+				EFA4CF2D230F0ECF00E6A169 /* CurrencyRateFlagLabels.swift */,
+				EF5F8FB8230C9B8300AA913E /* CurrencyListTableViewCell.swift */,
+				EF5F8FB9230C9B8300AA913E /* CurrencyListTableViewCell.xib */,
+			);
+			path = CurrencyListComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +449,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6636DD230DCEA3002D60C6 /* BebasNeue-Regular.otf in Resources */,
+				EF5F8FBD230C9B8300AA913E /* CurrencyListTableViewCell.xib in Resources */,
 				EF508CAF23059D4A00A7000D /* LaunchScreen.storyboard in Resources */,
 				EF508CAC23059D4A00A7000D /* Assets.xcassets in Resources */,
 				EF508CAA23059D4800A7000D /* Main.storyboard in Resources */,
@@ -367,6 +461,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5F8FC0230CA09F00AA913E /* CurrencyListTableViewCell.xib in Resources */,
+				EF6636DE230DCEA3002D60C6 /* BebasNeue-Regular.otf in Resources */,
 				EF508CEF2306115700A7000D /* FakeInvalidJson.json in Resources */,
 				EF508CEE2306115700A7000D /* FakeJson.json in Resources */,
 			);
@@ -376,6 +472,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5F8FC1230CA09F00AA913E /* CurrencyListTableViewCell.xib in Resources */,
+				EF6636DF230DCEA3002D60C6 /* BebasNeue-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,9 +487,20 @@
 				EFC94C17230A93D6006D5191 /* ReachabilityManager.swift in Sources */,
 				EF508CE62306011F00A7000D /* ErrorEntity.swift in Sources */,
 				EF508CE42305F40100A7000D /* NetworkManager.swift in Sources */,
+				EF6636D1230DC9A9002D60C6 /* UIFont+TetCurrencyAppFonts.swift in Sources */,
 				EF5F8FA8230BBAA700AA913E /* OfflineDataManager.swift in Sources */,
 				EF508CA723059D4800A7000D /* CurrencyListViewController.swift in Sources */,
+				EF6636E1230DCF7D002D60C6 /* CurrencyRateCellUILabels.swift in Sources */,
+				EFA4CF2A230EF0EC00E6A169 /* String+GetEmojiForCurrencyCode.swift in Sources */,
 				EF508CDA2305A64700A7000D /* CurrencyListInteractor.swift in Sources */,
+				EFA4CF2E230F0ECF00E6A169 /* CurrencyRateFlagLabels.swift in Sources */,
+				EF6636CD230DA407002D60C6 /* CellBackgroundView.swift in Sources */,
+				EF5F8FC3230D0FCC00AA913E /* UIApplicationExtension.swift in Sources */,
+				EF5F8FB4230C956E00AA913E /* ErrorExtension.swift in Sources */,
+				EFA4CF32230F190400E6A169 /* LoadingView.swift in Sources */,
+				EF5F8FBA230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */,
+				EF6636D9230DCC4D002D60C6 /* UserValueToInsertInputField.swift in Sources */,
+				EF5F8FC7230D10BF00AA913E /* UIColor+TetColours.swift in Sources */,
 				EF508CA523059D4800A7000D /* AppDelegate.swift in Sources */,
 				EF508CD62305A0F100A7000D /* CurrencyListViewPresenter.swift in Sources */,
 				EF508CDC2305EC6E00A7000D /* CurrencyRatesEntity.swift in Sources */,
@@ -402,15 +511,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA4CF2F230F0ECF00E6A169 /* CurrencyRateFlagLabels.swift in Sources */,
 				EFC94C142306DABB006D5191 /* AppDelegate.swift in Sources */,
+				EF5F8FC8230D10BF00AA913E /* UIColor+TetColours.swift in Sources */,
+				EF6636CE230DA407002D60C6 /* CellBackgroundView.swift in Sources */,
 				EFC94C122306DAB6006D5191 /* CurrencyListViewController.swift in Sources */,
+				EF5F8FBB230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */,
 				EFC94C102306DAB2006D5191 /* CurrencyListViewPresenter.swift in Sources */,
+				EF6636D2230DC9A9002D60C6 /* UIFont+TetCurrencyAppFonts.swift in Sources */,
+				EF6636E2230DCF7D002D60C6 /* CurrencyRateCellUILabels.swift in Sources */,
 				EF508CEA23060FBB00A7000D /* NetworkManagerTest.swift in Sources */,
 				EFC94C18230A93D6006D5191 /* ReachabilityManager.swift in Sources */,
+				EFA4CF33230F190400E6A169 /* LoadingView.swift in Sources */,
+				EF6636DA230DCC4D002D60C6 /* UserValueToInsertInputField.swift in Sources */,
+				EF5F8FC4230D0FCC00AA913E /* UIApplicationExtension.swift in Sources */,
 				EF5F8FA6230B3C8600AA913E /* CurrencyListInteractorTest.swift in Sources */,
+				EFA4CF2B230EF0EC00E6A169 /* String+GetEmojiForCurrencyCode.swift in Sources */,
+				EF5F8FB5230C956E00AA913E /* ErrorExtension.swift in Sources */,
 				EFC94C0E2306DAAE006D5191 /* CurrencyListInteractor.swift in Sources */,
 				EF508CE823060DAD00A7000D /* ErrorEntityTest.swift in Sources */,
 				EFC94C082306DAA0006D5191 /* NetworkManager.swift in Sources */,
+				EF5F8FB0230C7EBE00AA913E /* CurrencyListPresenterTests.swift in Sources */,
 				EF508CBA23059D4A00A7000D /* TetCurrencyExchangeTests.swift in Sources */,
 				EF508CE22305F0B700A7000D /* CurrencyRatesEntityTest.swift in Sources */,
 				EFC94C0C2306DAAA006D5191 /* CurrencyRatesEntity.swift in Sources */,
@@ -425,14 +546,25 @@
 			files = (
 				EFC94C152306DABC006D5191 /* AppDelegate.swift in Sources */,
 				EFC94C112306DAB3006D5191 /* CurrencyListViewPresenter.swift in Sources */,
+				EF6636CF230DA407002D60C6 /* CellBackgroundView.swift in Sources */,
 				EFC94C132306DAB6006D5191 /* CurrencyListViewController.swift in Sources */,
 				EFC94C092306DAA1006D5191 /* NetworkManager.swift in Sources */,
+				EFA4CF34230F190400E6A169 /* LoadingView.swift in Sources */,
+				EF5F8FBC230C9B8300AA913E /* CurrencyListTableViewCell.swift in Sources */,
 				EFC94C19230A93D6006D5191 /* ReachabilityManager.swift in Sources */,
 				EFC94C0F2306DAAF006D5191 /* CurrencyListInteractor.swift in Sources */,
+				EF5F8FC9230D10BF00AA913E /* UIColor+TetColours.swift in Sources */,
 				EF508CC523059D4A00A7000D /* TetCurrencyExchangeUITests.swift in Sources */,
+				EF6636DB230DCC4D002D60C6 /* UserValueToInsertInputField.swift in Sources */,
 				EFC94C0B2306DAA7006D5191 /* ErrorEntity.swift in Sources */,
+				EF5F8FC5230D0FCC00AA913E /* UIApplicationExtension.swift in Sources */,
+				EF6636D3230DC9A9002D60C6 /* UIFont+TetCurrencyAppFonts.swift in Sources */,
 				EFC94C0D2306DAAB006D5191 /* CurrencyRatesEntity.swift in Sources */,
+				EFA4CF30230F0ECF00E6A169 /* CurrencyRateFlagLabels.swift in Sources */,
 				EF5F8FAA230BBAA700AA913E /* OfflineDataManager.swift in Sources */,
+				EF5F8FB6230C956E00AA913E /* ErrorExtension.swift in Sources */,
+				EFA4CF2C230EF0EC00E6A169 /* String+GetEmojiForCurrencyCode.swift in Sources */,
+				EF6636E3230DCF7D002D60C6 /* CurrencyRateCellUILabels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,27 +9,40 @@
 import UIKit
 
 protocol CurrencyListPresenterDelegate: AnyObject {
-
+    func updateCurrencyListData(with currencyRates: CurrencyRatesEntity)
+    func presentErrorView(error: ErrorEntity)
 }
 
 class CurrencyListPresenter {
     var uiPresenterDelegate: CurrencyListPresenterDelegate?
     let interactor: CurrencyListInteractor
     
-    init() {
-        self.interactor = CurrencyListInteractor()
+    init(with interactor: CurrencyListInteractor = CurrencyListInteractor()) {
+        self.interactor = interactor
         self.interactor.currencyListInteractorDelegate = self
+        self.interactor.liveUpdateRates(active: true)
     }
+    
+    func updateViewData(with currencyRates: CurrencyRatesEntity) {
+        self.uiPresenterDelegate?.updateCurrencyListData(with: currencyRates)
+    }
+    
+//    func refreshCurrencyData() -> Void {
+//        interactor.getCurrencyRates()
+//    }
 }
 
 extension CurrencyListPresenter: CurrencyListInteractorDelegate {
     func getCurrencyRatesToDisplay(currencyRates: CurrencyRatesEntity) {
-        print(currencyRates)
-        
+        DispatchQueue.main.async { [weak self] in
+            self?.updateViewData(with: currencyRates)
+        }
     }
     
     func errorDetected(error: ErrorEntity) {
-        print("bbb")
+        DispatchQueue.main.async { [weak self] in
+            self?.uiPresenterDelegate?.presentErrorView(error: error)
+        }
     }
     
  

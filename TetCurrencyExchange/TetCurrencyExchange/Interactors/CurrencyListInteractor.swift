@@ -16,12 +16,23 @@ protocol CurrencyListInteractorDelegate: AnyObject {
 class CurrencyListInteractor {
     var currencyListInteractorDelegate: CurrencyListInteractorDelegate?
     let networkManager: NetworkManager
+    var updateTimer: Timer?
+    var viewJustLoaded: Bool!
 
     init(networkManager: NetworkManager = NetworkManager()) {
         self.networkManager = networkManager
+        viewJustLoaded = true
     }
     
-    func getCurrencyRates() -> Void {
+    func liveUpdateRates(active: Bool) -> Void {
+        if active {
+            updateTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getCurrencyRates), userInfo: nil, repeats: true)
+        } else {
+            updateTimer?.invalidate()
+        }
+    }
+    
+    @objc func getCurrencyRates() -> Void {
         let successHandler: (CurrencyRatesEntity) throws -> Void = { (currencyRates) in
             self.validateRatesAndUpdatePresenter(with: currencyRates)
         }
@@ -38,6 +49,15 @@ class CurrencyListInteractor {
         return NetworkManager.TetCurrencyEndpoints.getCurrecyRates.rawValue
     }
     
+    func doesNewReceivedDataHasAnyChange(newData: CurrencyRatesEntity) -> Bool {
+        let previousData = OfflineDataManager.loadPreviousCurrencyRates()
+        if newData.rates == previousData.rates || newData.date == previousData.date {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     func validateRatesAndUpdatePresenter(with currencyRates: CurrencyRatesEntity) -> Void {
         if !currencyRates.rates.isEmpty {
             let validCurrencyRates = currencyRates.rates.filter { (currencyRate) -> Bool in
@@ -50,8 +70,11 @@ class CurrencyListInteractor {
             
             if !validCurrencyRates.isEmpty {
                 let validCurrencyRateEntity = CurrencyRatesEntity(rates: validCurrencyRates, base: currencyRates.base, date: currencyRates.date)
-                OfflineDataManager.saveCurrencyRateData(withThisEntity: validCurrencyRateEntity)
-                self.currencyListInteractorDelegate?.getCurrencyRatesToDisplay(currencyRates: validCurrencyRateEntity)
+                if doesNewReceivedDataHasAnyChange(newData: validCurrencyRateEntity) || viewJustLoaded {
+                    viewJustLoaded = false
+                    OfflineDataManager.saveCurrencyRateData(withThisEntity: validCurrencyRateEntity)
+                    self.currencyListInteractorDelegate?.getCurrencyRatesToDisplay(currencyRates: validCurrencyRateEntity)
+                }
             }
         } else {
             self.currencyListInteractorDelegate?.errorDetected(error: .invalidCurrencyData)

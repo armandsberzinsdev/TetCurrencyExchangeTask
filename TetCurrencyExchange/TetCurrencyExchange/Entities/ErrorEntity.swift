@@ -22,7 +22,7 @@ extension ErrorEntity: CustomStringConvertible {
     
     var description: String {
         switch self {
-        case .noNetwork: return "It seems that you are offline 🥺 But you can still read already downloaded news 😉"
+        case .noNetwork: return "It seems that you are offline 🥺 But currency converter still works with previously downloaded rates 😉"
         case .invalidCurrencyData: return "Received data error 🧐 Please write to customer service and tell that Error:TIE001 appeared"
         case .invalidDate: return "No date provided - Error:TIE002"
         case .invalidBase: return "No introduction provided Error:TIE003"
