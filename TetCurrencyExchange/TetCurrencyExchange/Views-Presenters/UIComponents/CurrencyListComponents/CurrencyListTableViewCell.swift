@@ -25,6 +25,7 @@ class CurrencyListTableViewCell: UITableViewCell {
         currencyInuptField.delegate = self
         self.selectionStyle = .none
         currencyInuptField.text = "1"
+        currencyInuptField.tintColor = UIColor.TetColours.tetTintColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

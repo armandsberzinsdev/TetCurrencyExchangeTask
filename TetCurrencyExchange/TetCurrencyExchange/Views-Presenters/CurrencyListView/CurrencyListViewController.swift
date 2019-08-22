@@ -55,10 +55,11 @@ extension CurrencyListViewController: UITableViewDelegate {
         //let ratesArray = Array(safeCR.rates)
         // self.currencyRatesOnly[indexPath.row]
             cell.rateKeyLbl.text = self.currencyRatesOnly[indexPath.row].key
-            let calculatedRate = String(format: " € = %.4f ", self.currencyRatesOnly[indexPath.row].value * self.insertedAmount)
+            var calculatedRate = String(format: " € = %.4f ", self.currencyRatesOnly[indexPath.row].value * self.insertedAmount)
+            calculatedRate = calculatedRate.replacingOccurrences(of: ".", with: ",")
             cell.rateValueLbl.text = calculatedRate
             if indexPath.row > 0 {
-                cell.currencyInuptField.isEnabled = true
+                cell.currencyInuptField.isEnabled = false
                 cell.cellBgView.backgroundColor = UIColor.TetColours.tetCurrencyRateBGColour
                 cell.rateKeyLbl.textColor = UIColor.TetColours.tetCurrencyRateInactiveTextColour
                 cell.rateValueLbl.textColor = UIColor.TetColours.tetCurrencyRateInactiveTextColour
@@ -67,12 +68,16 @@ extension CurrencyListViewController: UITableViewDelegate {
                 if formattedInsertedAmount.contains(".0") {
                     formattedInsertedAmount = String(formattedInsertedAmount.dropLast(2))
                 }
+                formattedInsertedAmount = formattedInsertedAmount.replacingOccurrences(of: ".", with: ",")
+                cell.rateValueLbl.text = calculatedRate
                 cell.currencyInuptField.text = formattedInsertedAmount
             } else {
+                cell.currencyInuptField.isEnabled = true
                 cell.cellBgView.backgroundColor = UIColor.TetColours.tetMainColor
                 cell.rateKeyLbl.textColor = UIColor.TetColours.tetTintColor
                 cell.rateValueLbl.textColor = UIColor.TetColours.tetTintColor
                 cell.currencyInuptField.textColor = UIColor.TetColours.tetTintColor
+                cell.currencyInuptField.becomeFirstResponder()
             }
         }
         return cell
@@ -145,6 +150,7 @@ extension CurrencyListViewController: CurrencyRateCellDelegate {
 //            cell.rateKeyLbl.textColor = UIColor.TetColours.tetTintColor
 //            cell.rateValueLbl.textColor = UIColor.TetColours.tetTintColor
         cell.rateValueLbl.text = String(format: " € = %.4f ", self.currencyRatesOnly[0].value * self.insertedAmount)
+        
  //       }
         self.reloadCells()
     }
