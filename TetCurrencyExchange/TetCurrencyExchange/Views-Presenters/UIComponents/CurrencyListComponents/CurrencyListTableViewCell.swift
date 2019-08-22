@@ -24,6 +24,7 @@ class CurrencyListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         currencyInuptField.delegate = self
         self.selectionStyle = .none
+        currencyInuptField.text = "1"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
