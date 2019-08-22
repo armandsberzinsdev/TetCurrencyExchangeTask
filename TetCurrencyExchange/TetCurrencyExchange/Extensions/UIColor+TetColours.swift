@@ -13,5 +13,6 @@ extension UIColor {
         static let tetTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0) /* #ffffff */
         static let tetCurrencyRateBGColour = UIColor(red: 0.8831958175, green: 0.8831958175, blue: 0.8831958175, alpha: 1.0)
         static let tetCurrencyRateInactiveTextColour = UIColor.black
+        static let tetCurrencyRateHalfVisibleText = tetCurrencyRateInactiveTextColour.withAlphaComponent(0.5)
     }
 }
