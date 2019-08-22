@@ -20,7 +20,7 @@ class CurrencyListPresenter {
     init(with interactor: CurrencyListInteractor = CurrencyListInteractor()) {
         self.interactor = interactor
         self.interactor.currencyListInteractorDelegate = self
-        self.interactor.getCurrencyRates()
+        self.interactor.liveUpdateRates(active: true)
     }
     
     func updateViewData(with currencyRates: CurrencyRatesEntity) {
