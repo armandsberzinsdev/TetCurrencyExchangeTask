@@ -15,6 +15,7 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
     weak var uiPresenterDelegate: CurrencyListPresenterDelegate?
     weak var currencyRateCellDelegate: CurrencyListInteractorDelegate?
     var currentCurrencyRates: CurrencyRatesEntity?
+    var loadingView: LoadingView!
     var currencyRatesOnly: Array<(key: String, value: Double)> = []
     var insertedAmount: Double = 1
 //
@@ -25,6 +26,7 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showLoading()
         setupViewController()
     }
     
@@ -41,6 +43,15 @@ class CurrencyListViewController: UIViewController, UITableViewDataSource {
         logoContainer.addSubview(imageView)
         navigationItem.titleView = logoContainer
     }
+    
+    func showLoading(){
+        loadingView = LoadingView(frame: self.view.frame)
+        self.view.addSubview(loadingView)
+    }
+    
+    func hideLoading(){
+        loadingView.removeFromSuperview()
+    }
 }
 
 extension CurrencyListViewController: UITableViewDelegate {
@@ -55,7 +66,7 @@ extension CurrencyListViewController: UITableViewDelegate {
         //let ratesArray = Array(safeCR.rates)
         // self.currencyRatesOnly[indexPath.row]
             cell.rateKeyLbl.text = self.currencyRatesOnly[indexPath.row].key
-            var calculatedRate = String(format: " € = %.4f ", self.currencyRatesOnly[indexPath.row].value * self.insertedAmount)
+            var calculatedRate = String(format: " € = %.2f ", self.currencyRatesOnly[indexPath.row].value * self.insertedAmount)
             calculatedRate = calculatedRate.replacingOccurrences(of: ".", with: ",")
             cell.rateValueLbl.text = calculatedRate
             cell.flgLbl.text = String.getEmoji(for: self.currencyRatesOnly[indexPath.row].key)
@@ -127,13 +138,15 @@ extension CurrencyListViewController: CurrencyListPresenterDelegate {
     func updateCurrencyListData(with currencyRates: CurrencyRatesEntity) {
         self.currentCurrencyRates = currencyRates
        // if let safeCR = currencyRates {
-             self.currencyRatesOnly = Array(currencyRates.rates)
+        self.currencyRatesOnly = Array(currencyRates.rates).sorted(by: { $0.key < $1.key })
        // }
         self.currencyListTableView.reloadData()
+        hideLoading()
     }
     
     func presentErrorView(error: ErrorEntity) {
         error.alert(with: self)
+        hideLoading()
     }
 }
 
@@ -150,7 +163,9 @@ extension CurrencyListViewController: CurrencyRateCellDelegate {
 //            cell.cellBgView.backgroundColor = UIColor.TetColours.tetMainColor
 //            cell.rateKeyLbl.textColor = UIColor.TetColours.tetTintColor
 //            cell.rateValueLbl.textColor = UIColor.TetColours.tetTintColor
-        cell.rateValueLbl.text = String(format: " € = %.4f ", self.currencyRatesOnly[0].value * self.insertedAmount)
+        
+        cell.rateValueLbl.text = String(format: " € = %.2f ", self.currencyRatesOnly[0].value * self.insertedAmount)
+        cell.rateValueLbl.text = cell.rateValueLbl.text?.replacingOccurrences(of: ".", with: ",")
         
  //       }
         self.reloadCells()
