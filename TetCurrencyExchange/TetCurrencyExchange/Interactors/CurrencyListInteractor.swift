@@ -18,6 +18,7 @@ class CurrencyListInteractor {
     let networkManager: NetworkManager
     var updateTimer: Timer?
     var viewJustLoaded: Bool!
+    var pauseRequestionDueToNetworkErrors = false
 
     init(networkManager: NetworkManager = NetworkManager()) {
         self.networkManager = networkManager
@@ -41,8 +42,16 @@ class CurrencyListInteractor {
                 self.currencyListInteractorDelegate?.getCurrencyRatesToDisplay(currencyRates: OfflineDataManager.loadPreviousCurrencyRates())
             }
             self.currencyListInteractorDelegate?.errorDetected(error: networkManagerError)
+            self.pauseRequestionDueToNetworkErrors = true
         }
-        networkManager.get(urlString: getCurrencyRatesUrl(), successHandler: successHandler, errorHandler: errorHandler)
+        if pauseRequestionDueToNetworkErrors {
+            let rm = ReachabilityManager()
+            if rm.isConnectedToNetwork() {
+                pauseRequestionDueToNetworkErrors = false
+            }
+        } else {
+            networkManager.get(urlString: getCurrencyRatesUrl(), successHandler: successHandler, errorHandler: errorHandler)
+        }
     }
     
     func getCurrencyRatesUrl() -> String {
